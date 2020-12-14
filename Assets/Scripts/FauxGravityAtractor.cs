@@ -5,7 +5,7 @@ using UnityEngine;
 public class FauxGravityAtractor : MonoBehaviour
 {
     public float gravity = -10;
-
+    
     public void Attract(Transform body)
     {
         Vector3 gravityUp = (body.position - transform.position).normalized;
