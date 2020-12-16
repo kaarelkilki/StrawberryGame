@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    //public Rigidbody rb;
+    public Rigidbody rb;
+    public float thrust;
     //public float forwardForce = 15;
     public float moveSpeed = 15;
     private Vector3 moveDir;
@@ -25,7 +27,9 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
+        //rb.AddRelativeForce(Vector3.forward * thrust);
         GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + transform.TransformDirection(moveDir) * moveSpeed * Time.deltaTime);
+        
         //rb.AddForce(0, 0, forwardForce * Time.deltaTime);
         //if(Input.GetKey("d"))
         //{
