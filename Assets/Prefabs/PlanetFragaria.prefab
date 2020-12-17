@@ -1859,7 +1859,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2149693513879353826}
-  m_LocalRotation: {x: -0.28413415, y: 0.054394882, z: 0.2817951, w: 0.9148227}
+  m_LocalRotation: {x: -0.28413665, y: 0.054392796, z: 0.2817954, w: 0.9148219}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
@@ -1949,7 +1949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PolyMesh:
-    name: PolybrushMesh-1176
+    name: PolybrushMesh46818
     vertices:
     - {x: 0.28782713, y: -0.28782713, z: -0.28782713}
     - {x: 0.28782713, y: -0.28782713, z: 0.28782713}
