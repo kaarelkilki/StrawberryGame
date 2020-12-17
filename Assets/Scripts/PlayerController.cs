@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 15;
+    public float moveSpeed = 8;
     private Vector3 moveDir;
 
     public Button left;

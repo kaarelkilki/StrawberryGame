@@ -1585,6 +1585,11 @@ PrefabInstance:
       propertyPath: rigth
       value: 
       objectReference: {fileID: 1600741885}
+    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1361801354110009951, guid: 2c68e3b054411d941b60546b44c00655,
         type: 3}
       propertyPath: m_Constraints
