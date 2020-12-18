@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 8;
     public Button left;
     public Button right;
-    public Text countText;
+    public TMP_Text scoreText;
 
     private Vector3 moveDir;
     private Rigidbody rb;
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         count = 0;
-        
+        SetScoreText();
     }
     void Update()
     {
@@ -54,8 +55,11 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count = count + 1;
-            
+            SetScoreText();
         }
     }
-    
+    void SetScoreText()
+    {
+        scoreText.text = count.ToString() + " <sprite=0>";
+    }
 }
