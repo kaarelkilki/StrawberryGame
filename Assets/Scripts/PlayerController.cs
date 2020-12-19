@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     public Button right;
     public TMP_Text scoreText;
     public TMP_Text levelText;
+    public float timeRemaining = 30;
+    public bool timerIsRunning = false;
+    public TMP_Text timeText;
 
     private Vector3 moveDir;
     private Rigidbody rb;
@@ -23,9 +26,13 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
         count = 0;
         SetScoreText();
         SetLevelText();
+
+        // Starts the timer automatically
+        timerIsRunning = true;
     }
     void Update()
     {
@@ -45,6 +52,22 @@ public class PlayerController : MonoBehaviour
         //        GoLeft();
         //    }
         //}
+
+        if (timerIsRunning)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                DisplayTime(timeRemaining);
+            }
+            else
+            {
+                SceneManager.LoadScene("GameOver");
+                Debug.Log("Time has run out!");
+                timeRemaining = 0;
+                timerIsRunning = false;
+            }
+        }
 
         LoadNextLevel();
     }
@@ -80,5 +103,14 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+    }
+    void DisplayTime(float timeToDisplay)
+    {
+        timeToDisplay += 1;
+
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+        timeText.text = string.Format("{0:0}", seconds);
     }
 }
