@@ -86,10 +86,6 @@ public class PlayerController : MonoBehaviour
 
         timeText.text = string.Format("{0:0}", seconds);
 
-        DisplayTimeColor();
-    }
-    void DisplayTimeColor()
-    {
         if (timeToDisplay <= 6)
         {
             timeText.color = new Color32(255, 0, 0, 255);
@@ -97,7 +93,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             timeText.color = new Color32(255, 255, 255, 255);
-        }
+        } 
     }
     void TimerRunning()
     {
@@ -120,17 +116,17 @@ public class PlayerController : MonoBehaviour
     void PlayerLeftRight()
     {
         //player movement in Android device
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            if (touch.position.x > (Screen.width / 2))
-            {
-                GoRight();
-            }
-            if (touch.position.x < (Screen.width / 2))
-            {
-                GoLeft();
-            }
-        }
+        //if (Input.touchCount > 0)
+        //{
+        //    Touch touch = Input.GetTouch(0);
+        //    if (touch.position.x > (Screen.width / 2))
+        //    {
+        //        GoRight();
+        //    }
+        //    if (touch.position.x < (Screen.width / 2))
+        //    {
+        //        GoLeft();
+        //    }
+        //}
     }
 }

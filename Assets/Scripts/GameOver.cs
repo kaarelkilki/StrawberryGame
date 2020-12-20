@@ -16,7 +16,6 @@ public class GameOver : MonoBehaviour
     {
         // Starts the timer automatically
         timerIsRunning = true;
-        scoreText.text = count.ToString() + " <sprite=0>";
     }
 
     void Update()
