@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 478405579}
   - component: {fileID: 478405578}
   - component: {fileID: 478405577}
-  - component: {fileID: 478405581}
+  - component: {fileID: 478405582}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -231,7 +231,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &478405581
+--- !u!114 &478405582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 478405576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae0e01dc758c8824fbdf8997bbe669f9, type: 3}
+  m_Script: {fileID: 11500000, guid: efcf2e19265fe364a99d9cd1f35db321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &516319009
@@ -1311,7 +1311,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1292074902}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 478405582}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: PlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1292074904
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1967,9 +1979,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478405581}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Exit
+      - m_Target: {fileID: 478405582}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: ExitButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

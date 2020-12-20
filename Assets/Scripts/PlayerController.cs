@@ -9,8 +9,6 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 8;
-    public Button left;
-    public Button right;
     public TMP_Text scoreText;
     public TMP_Text levelText;
     public float timeRemaining = 30;
@@ -40,34 +38,9 @@ public class PlayerController : MonoBehaviour
         moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, 0).normalized;
 
         //player movement in Android device
-        //if (Input.touchCount > 0)
-        //{
-        //    Touch touch = Input.GetTouch(0);
-        //    if (touch.position.x > (Screen.width / 2))
-        //    {
-        //        GoRight();
-        //    }
-        //    if (touch.position.x < (Screen.width / 2))
-        //    {
-        //        GoLeft();
-        //    }
-        //}
+        //PlayerLeftRight();
 
-        if (timerIsRunning)
-        {
-            if (timeRemaining > 0)
-            {
-                timeRemaining -= Time.deltaTime;
-                DisplayTime(timeRemaining);
-            }
-            else
-            {
-                SceneManager.LoadScene("GameOver");
-                Debug.Log("Time has run out!");
-                timeRemaining = 0;
-                timerIsRunning = false;
-            }
-        }
+        TimerRunning();
 
         LoadNextLevel();
     }
@@ -112,5 +85,52 @@ public class PlayerController : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         timeText.text = string.Format("{0:0}", seconds);
+
+        DisplayTimeColor();
+    }
+    void DisplayTimeColor()
+    {
+        if (timeToDisplay <= 6)
+        {
+            timeText.color = new Color32(255, 0, 0, 255);
+        }
+        else
+        {
+            timeText.color = new Color32(255, 255, 255, 255);
+        }
+    }
+    void TimerRunning()
+    {
+        if (timerIsRunning)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                DisplayTime(timeRemaining);
+            }
+            else
+            {
+                SceneManager.LoadScene("GameOver");
+                Debug.Log("Time has run out!");
+                timeRemaining = 0;
+                timerIsRunning = false;
+            }
+        }
+    }
+    void PlayerLeftRight()
+    {
+        //player movement in Android device
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.position.x > (Screen.width / 2))
+            {
+                GoRight();
+            }
+            if (touch.position.x < (Screen.width / 2))
+            {
+                GoLeft();
+            }
+        }
     }
 }

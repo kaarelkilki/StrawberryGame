@@ -7,8 +7,6 @@ using TMPro;
 
 public class Menu : MonoBehaviour
 {
-    public Button play;
-    public Button exit;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,4 +19,13 @@ public class Menu : MonoBehaviour
         
     }
 
+    public void ExitButton()
+    {
+        Application.Quit();
+        Debug.Log("quit");
+    }
+    public void PlayButton()
+    {
+        SceneManager.LoadScene("Level1");
+    }
 }
