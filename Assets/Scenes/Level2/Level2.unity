@@ -380,6 +380,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7e4802dd94876641941cd7524bec95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &959332680 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8478429871503046498, guid: c0074b305ecd3c343b9324f6dedd8366,
+    type: 3}
+  m_PrefabInstance: {fileID: 1443663942}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1262157268 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8478429872936883678, guid: c0074b305ecd3c343b9324f6dedd8366,
+    type: 3}
+  m_PrefabInstance: {fileID: 1443663942}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1443663942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -499,6 +523,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0074b305ecd3c343b9324f6dedd8366, type: 3}
+--- !u!114 &1495485124 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8478429872628045026, guid: c0074b305ecd3c343b9324f6dedd8366,
+    type: 3}
+  m_PrefabInstance: {fileID: 1443663942}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1599146519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -831,9 +867,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
         type: 3}
+      propertyPath: timeText
+      value: 
+      objectReference: {fileID: 959332680}
+    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
+        type: 3}
+      propertyPath: levelText
+      value: 
+      objectReference: {fileID: 1495485124}
+    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
+        type: 3}
       propertyPath: moveSpeed
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
+        type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1262157268}
     - target: {fileID: 1361801354110009951, guid: 2c68e3b054411d941b60546b44c00655,
         type: 3}
       propertyPath: m_Constraints

@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Collectable"))
         {
             other.gameObject.SetActive(false);
-            count = count + 1;
+            count = count + SceneManager.GetActiveScene().buildIndex;
             SetScoreText();
         }
     }
