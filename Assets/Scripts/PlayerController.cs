@@ -11,14 +11,14 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 8;
     public TMP_Text scoreText;
     public TMP_Text levelText;
+    public int count;
     public float timeRemaining = 30;
     public bool timerIsRunning = false;
     public TMP_Text timeText;
-
+    
     private Vector3 moveDir;
     private Rigidbody rb;
-    private int count;
-
+    
     Scene scene;
 
     void Start()
@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
         // Starts the timer automatically
         timerIsRunning = true;
     }
+
     void Update()
     {
         //moves player left and right
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
         LoadNextLevel();
     }
+
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + transform.TransformDirection(moveDir) * moveSpeed * Time.deltaTime);
@@ -52,6 +54,7 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(rb.position + this.transform.forward * moveSpeed * Time.deltaTime);
 
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Collectable"))
@@ -60,23 +63,66 @@ public class PlayerController : MonoBehaviour
             count = count + SceneManager.GetActiveScene().buildIndex;
             SetScoreText();
         }
+        else if(other.gameObject.CompareTag("Obstacles"))
+        {
+            GameOver();
+        }
     }
+
     void SetScoreText()
     {
         scoreText.text = count.ToString() + " <sprite=0>";
     }
+
     void SetLevelText()
     {
         scene = SceneManager.GetActiveScene();
         levelText.text = "Level " + scene.buildIndex;
     }
+
     void LoadNextLevel()
     {
-        if (count == 15)
+        switch(SceneManager.GetActiveScene().buildIndex)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            case 1:
+                if (count == 15)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                break;
+            case 2:
+                if (count == 30)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                break;
+            case 3:
+                if (count == 45)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                break;
+            case 4:
+                if (count == 60)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                break;
+            case 5:
+                if (count == 75)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                break;
         }
     }
+
+    void GameOver()
+    {
+        Debug.Log("GameOver");
+        SceneManager.LoadScene("GameOver");
+    }
+
     void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
@@ -95,6 +141,7 @@ public class PlayerController : MonoBehaviour
             timeText.color = new Color32(255, 255, 255, 255);
         } 
     }
+
     void TimerRunning()
     {
         if (timerIsRunning)
@@ -106,13 +153,14 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("GameOver");
+                GameOver();
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
             }
         }
     }
+
     void PlayerLeftRight()
     {
         //player movement in Android device
