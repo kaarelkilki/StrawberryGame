@@ -239,6 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeRemaining: 3
   timerIsRunning: 0
+  scoreText: {fileID: 591425415}
 --- !u!1 &516319009
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +817,21 @@ PrefabInstance:
     - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
+        type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
+        type: 3}
+      propertyPath: timeRemaining
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1361801354110009951, guid: 2c68e3b054411d941b60546b44c00655,

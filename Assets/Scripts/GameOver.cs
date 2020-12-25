@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.Threading;
 
 public class GameOver : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class GameOver : MonoBehaviour
     {
         // Starts the timer automatically
         timerIsRunning = true;
+        
     }
 
     void Update()

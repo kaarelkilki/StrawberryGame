@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public float timeRemaining = 30;
     public bool timerIsRunning = false;
     public TMP_Text timeText;
-    
+
     private Vector3 moveDir;
     private Rigidbody rb;
     
@@ -23,9 +23,10 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        LoadPlayer();
         rb = GetComponent<Rigidbody>();
 
-        count = 0;
+        AddLevelTime();
         SetScoreText();
         SetLevelText();
 
@@ -80,6 +81,31 @@ public class PlayerController : MonoBehaviour
         levelText.text = "Level " + scene.buildIndex;
     }
 
+    void AddLevelTime()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            timeRemaining = 35.0f;
+            count = 0;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            timeRemaining = timeRemaining + 25.0f;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            timeRemaining = timeRemaining + 15.0f;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            timeRemaining = timeRemaining + 10.0f;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            timeRemaining = timeRemaining + 5.0f;
+        }
+    }
+
     void LoadNextLevel()
     {
         switch(SceneManager.GetActiveScene().buildIndex)
@@ -87,31 +113,36 @@ public class PlayerController : MonoBehaviour
             case 1:
                 if (count == 15)
                 {
+                    SavePlayer();
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 break;
             case 2:
-                if (count == 30)
+                if (count == 45)
                 {
+                    SavePlayer();
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 break;
             case 3:
-                if (count == 45)
+                if (count == 90)
                 {
+                    SavePlayer();
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 break;
             case 4:
-                if (count == 60)
+                if (count == 150)
                 {
+                    SavePlayer();
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 break;
             case 5:
-                if (count == 75)
+                if (count == 225)
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    SavePlayer();
+                    GameOver();
                 }
                 break;
         }
@@ -121,6 +152,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("GameOver");
         SceneManager.LoadScene("GameOver");
+        LoadPlayer();
     }
 
     void DisplayTime(float timeToDisplay)
@@ -176,5 +208,18 @@ public class PlayerController : MonoBehaviour
         //        GoLeft();
         //    }
         //}
+    }
+
+    void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+
+    void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        count = data.count;
+        timeRemaining = data.timeRemaining;
     }
 }

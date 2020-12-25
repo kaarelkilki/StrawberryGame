@@ -11,5 +11,6 @@ public class PlayerData
     public PlayerData(PlayerController player)
     {
         count = player.count;
+        timeRemaining = player.timeRemaining;
     }
 }
