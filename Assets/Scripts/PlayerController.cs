@@ -109,6 +109,11 @@ public class PlayerController : MonoBehaviour
             LoadPlayer();
             timeRemaining = timeRemaining + 10.0f;
         }
+        else if (SceneManager.GetActiveScene().buildIndex == 6)
+        {
+            LoadPlayer();
+            timeRemaining = 3.0f;
+        }
     }
 
     void LoadNextLevel()
