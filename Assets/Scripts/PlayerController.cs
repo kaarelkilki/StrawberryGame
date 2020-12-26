@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        LoadPlayer();
         rb = GetComponent<Rigidbody>();
 
         AddLevelTime();
@@ -43,7 +42,6 @@ public class PlayerController : MonoBehaviour
         //PlayerLeftRight();
 
         TimerRunning();
-
         LoadNextLevel();
     }
 
@@ -85,24 +83,31 @@ public class PlayerController : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            timeRemaining = 35.0f;
             count = 0;
+            timeRemaining = 35;
+            SavePlayer();
+            LoadPlayer();
         }
         else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
+            LoadPlayer();
             timeRemaining = timeRemaining + 25.0f;
+            
         }
         else if (SceneManager.GetActiveScene().buildIndex == 3)
         {
-            timeRemaining = timeRemaining + 15.0f;
+            LoadPlayer();
+            timeRemaining = timeRemaining + 20.0f;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 4)
         {
-            timeRemaining = timeRemaining + 10.0f;
+            LoadPlayer();
+            timeRemaining = timeRemaining + 15.0f;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 5)
         {
-            timeRemaining = timeRemaining + 5.0f;
+            LoadPlayer();
+            timeRemaining = timeRemaining + 10.0f;
         }
     }
 
@@ -185,6 +190,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                SavePlayer();
                 GameOver();
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
