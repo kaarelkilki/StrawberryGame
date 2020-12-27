@@ -182,7 +182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eae1fa6beb2765749bf3a3180822df96, type: 3}
+  m_Sprite: {fileID: 21300000, guid: efb93ebd754adbf42b4afb41080e22a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5a3f29f32a203af4b93feea7d089b92c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 880063a60644a4549a39b9876935f41d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -939,8 +939,18 @@ PrefabInstance:
       objectReference: {fileID: 2101413020}
     - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
         type: 3}
+      propertyPath: highScoreText
+      value: 
+      objectReference: {fileID: 8478429870835601732}
+    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
+        type: 3}
       propertyPath: timeRemaining
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
+        type: 3}
+      propertyPath: timerIsRunning
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c68e3b054411d941b60546b44c00655, type: 3}
@@ -951,6 +961,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5929698124475046005, guid: c0074b305ecd3c343b9324f6dedd8366,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8478429871168968129, guid: c0074b305ecd3c343b9324f6dedd8366,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1084,3 +1099,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 8478429870835601730}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8478429870835601732 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1776240461546859288, guid: c0074b305ecd3c343b9324f6dedd8366,
+    type: 3}
+  m_PrefabInstance: {fileID: 8478429870835601730}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

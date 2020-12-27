@@ -11,7 +11,9 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 8;
     public TMP_Text scoreText;
     public TMP_Text levelText;
+    public TMP_Text highScoreText;
     public int count;
+    public int highScore;
     public float timeRemaining = 30;
     public bool timerIsRunning = false;
     public TMP_Text timeText;
@@ -24,13 +26,12 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+                
         AddLevelTime();
         SetScoreText();
         SetLevelText();
-
-        // Starts the timer automatically
-        timerIsRunning = true;
+        SetHighScoreText();
+        TimerStarter();
     }
 
     void Update()
@@ -62,15 +63,27 @@ public class PlayerController : MonoBehaviour
             count = count + SceneManager.GetActiveScene().buildIndex;
             SetScoreText();
         }
-        else if(other.gameObject.CompareTag("Obstacles"))
-        {
-            GameOver();
-        }
     }
 
     void SetScoreText()
     {
-        scoreText.text = count.ToString() + " <sprite=0>";
+        scoreText.text = count.ToString() + "  <sprite=0>";
+    }
+    void SetHighScoreText()
+    {
+        if (count > highScore)
+        {
+            highScore = count;
+            SavePlayer();
+        }
+        if (highScore > 0)
+        {
+            highScoreText.text = "<sprite=0>" + highScore.ToString();
+        }
+        else
+        {
+            highScoreText.text = "<sprite=0>" + 0;
+        }
     }
 
     void SetLevelText()
@@ -84,9 +97,7 @@ public class PlayerController : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             count = 0;
-            timeRemaining = 35;
-            SavePlayer();
-            LoadPlayer();
+            timeRemaining = 30;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
@@ -204,6 +215,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void TimerStarter()
+    {
+        // Starts the timer automatically
+        if (SceneManager.GetActiveScene().buildIndex == (1 | 2 | 3 | 4 | 5 | 6))
+        {
+            timerIsRunning = true;
+        }
+    }
+
     void PlayerLeftRight()
     {
         //player movement in Android device
@@ -232,5 +252,12 @@ public class PlayerController : MonoBehaviour
 
         count = data.count;
         timeRemaining = data.timeRemaining;
+    }
+
+    void LoadHighScore()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        highScore = data.highScore;
     }
 }
