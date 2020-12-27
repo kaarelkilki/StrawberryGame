@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
         AddLevelTime();
         SetScoreText();
         SetLevelText();
-        SetHighScoreText();
         TimerStarter();
     }
 
@@ -74,15 +73,8 @@ public class PlayerController : MonoBehaviour
         if (count > highScore)
         {
             highScore = count;
-            SavePlayer();
-        }
-        if (highScore > 0)
-        {
             highScoreText.text = "<sprite=0>" + highScore.ToString();
-        }
-        else
-        {
-            highScoreText.text = "<sprite=0>" + 0;
+            SavePlayer();
         }
     }
 
@@ -94,6 +86,13 @@ public class PlayerController : MonoBehaviour
 
     void AddLevelTime()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            LoadPlayer();
+            timeRemaining = 30;
+            SetHighScoreText();
+        }
+
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             count = 0;
@@ -252,12 +251,13 @@ public class PlayerController : MonoBehaviour
 
         count = data.count;
         timeRemaining = data.timeRemaining;
-    }
-
-    void LoadHighScore()
-    {
-        PlayerData data = SaveSystem.LoadPlayer();
-
         highScore = data.highScore;
     }
+
+    //void LoadHighScore()
+    //{
+    //    PlayerData data = SaveSystem.LoadPlayer();
+
+    //    highScore = data.highScore;
+    //}
 }
