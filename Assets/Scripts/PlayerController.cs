@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        LoadPlayer();
         rb = GetComponent<Rigidbody>();
                 
         AddLevelTime();
@@ -67,12 +68,14 @@ public class PlayerController : MonoBehaviour
     void SetScoreText()
     {
         scoreText.text = count.ToString() + "  <sprite=0>";
-    }
-    void SetHighScoreText()
-    {
-        if (count > highScore)
+        if (count >= highScore)
         {
             highScore = count;
+            highScoreText.text = "<sprite=0>" + count.ToString();
+            SavePlayer();
+        }
+        else if (count < highScore)
+        {
             highScoreText.text = "<sprite=0>" + highScore.ToString();
             SavePlayer();
         }
@@ -88,40 +91,32 @@ public class PlayerController : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            LoadPlayer();
-            timeRemaining = 30;
-            SetHighScoreText();
+            timeRemaining = 30.0f;
         }
-
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        else if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             count = 0;
-            timeRemaining = 30;
+            timeRemaining = 29.0f;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            LoadPlayer();
-            timeRemaining = timeRemaining + 25.0f;
+            timeRemaining = timeRemaining + 23.2f;
             
         }
         else if (SceneManager.GetActiveScene().buildIndex == 3)
         {
-            LoadPlayer();
-            timeRemaining = timeRemaining + 20.0f;
+            timeRemaining = timeRemaining + 18.56f;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 4)
         {
-            LoadPlayer();
-            timeRemaining = timeRemaining + 15.0f;
+            timeRemaining = timeRemaining + 14.848f;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 5)
         {
-            LoadPlayer();
-            timeRemaining = timeRemaining + 10.0f;
+            timeRemaining = timeRemaining + 11.8784f;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 6)
         {
-            LoadPlayer();
             timeRemaining = 3.0f;
         }
     }
@@ -170,7 +165,6 @@ public class PlayerController : MonoBehaviour
 
     void GameOver()
     {
-        Debug.Log("GameOver");
         SceneManager.LoadScene("GameOver");
         LoadPlayer();
     }
@@ -207,7 +201,6 @@ public class PlayerController : MonoBehaviour
             {
                 SavePlayer();
                 GameOver();
-                Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
             }
@@ -253,11 +246,4 @@ public class PlayerController : MonoBehaviour
         timeRemaining = data.timeRemaining;
         highScore = data.highScore;
     }
-
-    //void LoadHighScore()
-    //{
-    //    PlayerData data = SaveSystem.LoadPlayer();
-
-    //    highScore = data.highScore;
-    //}
 }
