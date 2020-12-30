@@ -12,8 +12,17 @@ public class PlayerController : MonoBehaviour
     public TMP_Text scoreText;
     public TMP_Text levelText;
     public TMP_Text highScoreText;
+    public TMP_Text scoreIiText;
+    public TMP_Text scoreIiiText;
+    public TMP_Text scoreIvText;
+    public TMP_Text scoreVText;
+
     public int count;
     public int highScore;
+    public int scoreII;
+    public int scoreIII;
+    public int scoreIV;
+    public int scoreV;
     public float timeRemaining = 30;
     public float extraTime;
     public bool timerIsRunning = false;
@@ -61,7 +70,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Collectable"))
         {
             other.gameObject.SetActive(false);
-            count = count + SceneManager.GetActiveScene().buildIndex;
+            count = count + 1;
             SetScoreText();
         }
     }
@@ -69,17 +78,111 @@ public class PlayerController : MonoBehaviour
     void SetScoreText()
     {
         scoreText.text = count.ToString() + "  <sprite=0>";
-        if (count >= highScore)
+        //if (count >= highScore)
+        //{
+        //    highScore = count;
+        //    highScoreText.text = "<sprite=0>" + count.ToString();
+        //    SavePlayer();
+        //}
+        //else if (count < highScore)
+        //{
+        //    highScoreText.text = "<sprite=0>" + highScore.ToString();
+        //    SavePlayer();
+        //}
+        if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            highScore = count;
-            highScoreText.text = "<sprite=0>" + count.ToString();
-            SavePlayer();
+            if (count >= highScore)
+            {
+                ScoreVscoreIV();
+                ScoreIVscoreIII();
+                ScoreIIIscoreII();
+                scoreII = highScore;
+                scoreIiText.text = highScore.ToString();
+                highScore = count;
+                highScoreText.text = count.ToString();
+                SavePlayer();
+            }
+            else if (count < highScore & count > scoreII)
+            {
+                ScoreVscoreIV();
+                ScoreIVscoreIII();
+                ScoreIIIscoreII();
+                scoreII = count;
+                scoreIiText.text = count.ToString();
+                HighScoreText();
+                SavePlayer();
+            }
+            else if (count < scoreII & count > scoreIII)
+            {
+                ScoreVscoreIV();
+                ScoreIVscoreIII();
+                scoreIII = count;
+                scoreIiiText.text = count.ToString();
+                ScoreIIText();
+                HighScoreText();
+                SavePlayer();
+            }
+            else if (count < scoreIII & count > scoreIV)
+            {
+                ScoreVscoreIV();
+                scoreIV = count;
+                scoreIvText.text = count.ToString();
+                ScoreIIIText();
+                ScoreIIText();
+                HighScoreText();
+                SavePlayer();
+            }
+            else if (count < scoreIV & count > scoreV)
+            {
+                scoreV = count;
+                scoreVText.text = count.ToString();
+                ScoreIVText();
+                ScoreIIIText();
+                ScoreIIText();
+                HighScoreText();
+                SavePlayer();
+            }
+            else //if(count < scoreV)
+            {
+                scoreVText.text = scoreV.ToString();
+                ScoreIVText();
+                ScoreIIIText();
+                ScoreIIText();
+                HighScoreText();
+                SavePlayer();
+            }
         }
-        else if (count < highScore)
-        {
-            highScoreText.text = "<sprite=0>" + highScore.ToString();
-            SavePlayer();
-        }
+    }
+    void ScoreVscoreIV()
+    {
+        scoreV = scoreIV;
+        scoreVText.text = scoreIV.ToString();
+    }
+    void ScoreIVscoreIII()
+    {
+        scoreIV = scoreIII;
+        scoreIvText.text = scoreIII.ToString();
+    }
+    void ScoreIIIscoreII()
+    {
+        scoreIII = scoreII;
+        scoreIiiText.text = scoreII.ToString();
+    }
+    void HighScoreText()
+    {
+        highScoreText.text = highScore.ToString();
+    }
+    void ScoreIIText()
+    {
+        scoreIiText.text = scoreII.ToString();
+    }
+    void ScoreIIIText()
+    {
+        scoreIiiText.text = scoreIII.ToString();
+    }
+    void ScoreIVText()
+    {
+        scoreIvText.text = scoreIV.ToString();
     }
 
     void SetLevelText()
@@ -246,11 +349,16 @@ public class PlayerController : MonoBehaviour
         count = data.count;
         timeRemaining = data.timeRemaining;
         highScore = data.highScore;
+        scoreII = data.scoreII;
+        scoreIII = data.scoreIII;
+        scoreIV = data.scoreIV;
+        scoreV = data.scoreV;
         extraTime = data.extraTime;
     }
 
     public void ExitButton()
     {
+        SavePlayer();
         Application.Quit();
         Debug.Log("quit");
     }
