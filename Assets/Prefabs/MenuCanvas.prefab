@@ -2107,9 +2107,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 8889383394471079603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efcf2e19265fe364a99d9cd1f35db321, type: 3}
+  m_Script: {fileID: 11500000, guid: 0048c5fed6b895c4aac7d3c5b6b49af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 8
+  scoreText: {fileID: 0}
+  levelText: {fileID: 0}
+  highScoreText: {fileID: 0}
+  count: 0
+  highScore: 0
+  timeRemaining: 30
+  extraTime: 0
+  timerIsRunning: 0
+  timeText: {fileID: 0}
 --- !u!1 &8889383394476779057
 GameObject:
   m_ObjectHideFlags: 0

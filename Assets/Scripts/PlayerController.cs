@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public int count;
     public int highScore;
     public float timeRemaining = 30;
+    public float extraTime;
     public bool timerIsRunning = false;
     public TMP_Text timeText;
 
@@ -245,5 +246,18 @@ public class PlayerController : MonoBehaviour
         count = data.count;
         timeRemaining = data.timeRemaining;
         highScore = data.highScore;
+        extraTime = data.extraTime;
+    }
+
+    public void ExitButton()
+    {
+        Application.Quit();
+        Debug.Log("quit");
+    }
+
+    public void PlayButton()
+    {
+        SavePlayer();
+        SceneManager.LoadScene("Level1");
     }
 }
