@@ -13,6 +13,7 @@ public class PlayerData
     public int scoreIV;
     public int scoreV;
     public float extraTime;
+    public float[] position;
 
     public PlayerData(PlayerController player)
     {
@@ -24,5 +25,10 @@ public class PlayerData
         scoreIV = player.scoreIV;
         scoreV = player.scoreV;
         extraTime = player.extraTime;
+
+        position = new float[3];
+        position[0] = player.transform.position.x;
+        position[1] = player.transform.position.y;
+        position[2] = player.transform.position.z;
     }
 }

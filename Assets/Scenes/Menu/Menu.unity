@@ -1069,7 +1069,7 @@ PrefabInstance:
     - target: {fileID: 8889383394214745178, guid: 5be4074fc9284ab438147389c9c284ec,
         type: 3}
       propertyPath: m_text
-      value: TOP   <sprite=0>
+      value: <sprite=0>TOP
       objectReference: {fileID: 0}
     - target: {fileID: 8889383394214745178, guid: 5be4074fc9284ab438147389c9c284ec,
         type: 3}

@@ -354,6 +354,11 @@ public class PlayerController : MonoBehaviour
         scoreIV = data.scoreIV;
         scoreV = data.scoreV;
         extraTime = data.extraTime;
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
     }
 
     public void ExitButton()
