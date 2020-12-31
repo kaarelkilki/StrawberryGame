@@ -242,6 +242,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasGameOver
       objectReference: {fileID: 0}
+    - target: {fileID: 8153239991935404820, guid: c7395cf0cf37b294e822b2cefe70f509,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7395cf0cf37b294e822b2cefe70f509, type: 3}
 --- !u!223 &256344603 stripped
@@ -1007,6 +1012,11 @@ PrefabInstance:
     - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
         type: 3}
       propertyPath: scoreIiiText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
+        type: 3}
+      propertyPath: extraTimeText
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,

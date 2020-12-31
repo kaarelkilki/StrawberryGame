@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public TMP_Text levelText;
     public TMP_Text highScoreText;
     public TMP_Text timeText;
-
+    
     public int count;
     public int highScore;
     public float timeRemaining = 30;
@@ -133,7 +133,7 @@ public class PlayerController : MonoBehaviour
         {
             PlayCanvas();
         }
-        else
+        else if (SceneManager.GetActiveScene().buildIndex == 6)
         {
             menuCanvas.enabled = false;
             NotPlayCanvas();
@@ -275,7 +275,6 @@ public class PlayerController : MonoBehaviour
             else
             {
                 SavePlayer();
-                //WinScreen();
                 GameOverCanvas();
                 timeRemaining = 0;
                 timerIsRunning = false;
@@ -299,9 +298,9 @@ public class PlayerController : MonoBehaviour
     void GameOverCanvas()
     {
         moveSpeed = 0;
+        gameOverCanvas.enabled = true;
         menuCanvas.enabled = false;
         playCanvas.enabled = false;
-        gameOverCanvas.enabled = true;
         if (extraTime > 0.0f)
         {
             extraTimeButton.gameObject.SetActive(true);
