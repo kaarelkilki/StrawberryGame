@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
 
     [SerializeField]
+    private Canvas menuCanvas;
+    [SerializeField]
     private Canvas playCanvas;
     [SerializeField]
     private Canvas gameOverCanvas;
@@ -38,8 +40,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         SetMoveSpeed();
-        SetPlayCanvas();
-        SetPlayCanvas();
+        SetCanvas();
         AddLevelTime();
         SetScoreText();
         SetLevelText();
@@ -105,9 +106,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SetPlayCanvas()
+    void SetCanvas()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            menuCanvas.enabled = true;
+            NotPlayCanvas();
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             PlayCanvas();
         }
@@ -129,8 +135,8 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            playCanvas.enabled = false;
-            gameOverCanvas.enabled = false;
+            menuCanvas.enabled = false;
+            NotPlayCanvas();
         }
     }
 
@@ -279,14 +285,21 @@ public class PlayerController : MonoBehaviour
 
     void PlayCanvas()
     {
+        menuCanvas.enabled = false;
         playCanvas.enabled = true;
         gameOverCanvas.enabled = false;
-        
+    }
+
+    void NotPlayCanvas()
+    {
+        playCanvas.enabled = false;
+        gameOverCanvas.enabled = false;
     }
 
     void GameOverCanvas()
     {
         moveSpeed = 0;
+        menuCanvas.enabled = false;
         playCanvas.enabled = false;
         gameOverCanvas.enabled = true;
         if (extraTime > 0.0f)
