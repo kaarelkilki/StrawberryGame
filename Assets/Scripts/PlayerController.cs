@@ -8,36 +8,38 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 8;
+    public float moveSpeed;
     public TMP_Text scoreText;
     public TMP_Text levelText;
     public TMP_Text highScoreText;
-    public TMP_Text scoreIiText;
-    public TMP_Text scoreIiiText;
-    public TMP_Text scoreIvText;
-    public TMP_Text scoreVText;
+    public TMP_Text timeText;
 
     public int count;
     public int highScore;
-    public int scoreII;
-    public int scoreIII;
-    public int scoreIV;
-    public int scoreV;
     public float timeRemaining = 30;
     public float extraTime;
     public bool timerIsRunning = false;
-    public TMP_Text timeText;
-
+    
     private Vector3 moveDir;
     private Rigidbody rb;
-    
+
+    [SerializeField]
+    private Canvas playCanvas;
+    [SerializeField]
+    private Canvas gameOverCanvas;
+    [SerializeField]
+    private Button extraTimeButton;
+
     Scene scene;
 
     void Start()
     {
         LoadPlayer();
         rb = GetComponent<Rigidbody>();
-                
+
+        SetMoveSpeed();
+        SetPlayCanvas();
+        SetPlayCanvas();
         AddLevelTime();
         SetScoreText();
         SetLevelText();
@@ -75,116 +77,79 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void SetMoveSpeed()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            moveSpeed = 8;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            moveSpeed = 9;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            moveSpeed = 10;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            moveSpeed = 11;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            moveSpeed = 12;
+        }
+        else
+        {
+            moveSpeed = 0;
+        }
+    }
+
+    void SetPlayCanvas()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            PlayCanvas();
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            PlayCanvas();
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            PlayCanvas();
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            PlayCanvas();
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            PlayCanvas();
+        }
+        else
+        {
+            playCanvas.enabled = false;
+            gameOverCanvas.enabled = false;
+        }
+    }
+
     void SetScoreText()
     {
         scoreText.text = count.ToString() + "  <sprite=0>";
-        //if (count >= highScore)
-        //{
-        //    highScore = count;
-        //    highScoreText.text = "<sprite=0>" + count.ToString();
-        //    SavePlayer();
-        //}
-        //else if (count < highScore)
-        //{
-        //    highScoreText.text = "<sprite=0>" + highScore.ToString();
-        //    SavePlayer();
-        //}
-        if (SceneManager.GetActiveScene().buildIndex == 0)
+        if (count >= highScore)
         {
-            if (count >= highScore)
-            {
-                ScoreVscoreIV();
-                ScoreIVscoreIII();
-                ScoreIIIscoreII();
-                scoreII = highScore;
-                scoreIiText.text = highScore.ToString();
-                highScore = count;
-                highScoreText.text = count.ToString();
-                SavePlayer();
-            }
-            else if (count < highScore & count > scoreII)
-            {
-                ScoreVscoreIV();
-                ScoreIVscoreIII();
-                ScoreIIIscoreII();
-                scoreII = count;
-                scoreIiText.text = count.ToString();
-                HighScoreText();
-                SavePlayer();
-            }
-            else if (count < scoreII & count > scoreIII)
-            {
-                ScoreVscoreIV();
-                ScoreIVscoreIII();
-                scoreIII = count;
-                scoreIiiText.text = count.ToString();
-                ScoreIIText();
-                HighScoreText();
-                SavePlayer();
-            }
-            else if (count < scoreIII & count > scoreIV)
-            {
-                ScoreVscoreIV();
-                scoreIV = count;
-                scoreIvText.text = count.ToString();
-                ScoreIIIText();
-                ScoreIIText();
-                HighScoreText();
-                SavePlayer();
-            }
-            else if (count < scoreIV & count > scoreV)
-            {
-                scoreV = count;
-                scoreVText.text = count.ToString();
-                ScoreIVText();
-                ScoreIIIText();
-                ScoreIIText();
-                HighScoreText();
-                SavePlayer();
-            }
-            else //if(count < scoreV)
-            {
-                scoreVText.text = scoreV.ToString();
-                ScoreIVText();
-                ScoreIIIText();
-                ScoreIIText();
-                HighScoreText();
-                SavePlayer();
-            }
+            highScore = count;
+            highScoreText.text = "<sprite=0>" + count.ToString();
+            SavePlayer();
+        }
+        else if (count < highScore)
+        {
+            highScoreText.text = "<sprite=0>" + highScore.ToString();
+            SavePlayer();
         }
     }
-    void ScoreVscoreIV()
-    {
-        scoreV = scoreIV;
-        scoreVText.text = scoreIV.ToString();
-    }
-    void ScoreIVscoreIII()
-    {
-        scoreIV = scoreIII;
-        scoreIvText.text = scoreIII.ToString();
-    }
-    void ScoreIIIscoreII()
-    {
-        scoreIII = scoreII;
-        scoreIiiText.text = scoreII.ToString();
-    }
-    void HighScoreText()
-    {
-        highScoreText.text = highScore.ToString();
-    }
-    void ScoreIIText()
-    {
-        scoreIiText.text = scoreII.ToString();
-    }
-    void ScoreIIIText()
-    {
-        scoreIiiText.text = scoreIII.ToString();
-    }
-    void ScoreIVText()
-    {
-        scoreIvText.text = scoreIV.ToString();
-    }
-
+    
     void SetLevelText()
     {
         scene = SceneManager.GetActiveScene();
@@ -237,37 +202,37 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
             case 2:
-                if (count == 45)
+                if (count == 30)
                 {
                     SavePlayer();
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 break;
             case 3:
-                if (count == 90)
+                if (count == 45)
                 {
                     SavePlayer();
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 break;
             case 4:
-                if (count == 150)
+                if (count == 60)
                 {
                     SavePlayer();
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 break;
             case 5:
-                if (count == 225)
+                if (count == 75)
                 {
                     SavePlayer();
-                    GameOver();
+                    WinScreen();
                 }
                 break;
         }
     }
 
-    void GameOver()
+    void WinScreen()
     {
         SceneManager.LoadScene("GameOver");
         LoadPlayer();
@@ -304,10 +269,33 @@ public class PlayerController : MonoBehaviour
             else
             {
                 SavePlayer();
-                GameOver();
+                //WinScreen();
+                GameOverCanvas();
                 timeRemaining = 0;
                 timerIsRunning = false;
             }
+        }
+    }
+
+    void PlayCanvas()
+    {
+        playCanvas.enabled = true;
+        gameOverCanvas.enabled = false;
+        
+    }
+
+    void GameOverCanvas()
+    {
+        moveSpeed = 0;
+        playCanvas.enabled = false;
+        gameOverCanvas.enabled = true;
+        if (extraTime > 0.0f)
+        {
+            extraTimeButton.gameObject.SetActive(true);
+        }
+        else if (extraTime <= 0.0f)
+        {
+            extraTimeButton.gameObject.SetActive(false);
         }
     }
 
@@ -349,16 +337,12 @@ public class PlayerController : MonoBehaviour
         count = data.count;
         timeRemaining = data.timeRemaining;
         highScore = data.highScore;
-        scoreII = data.scoreII;
-        scoreIII = data.scoreIII;
-        scoreIV = data.scoreIV;
-        scoreV = data.scoreV;
         extraTime = data.extraTime;
 
-        Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
+        //Vector3 position;
+        //position.x = data.position[0];
+        //position.y = data.position[1];
+        //position.z = data.position[2];
     }
 
     public void ExitButton()
@@ -372,5 +356,20 @@ public class PlayerController : MonoBehaviour
     {
         SavePlayer();
         SceneManager.LoadScene("Level1");
+    }
+
+    public void Menu()
+    {
+        SavePlayer();
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void AddExtraTime()
+    {
+        timeRemaining += 6.0f;
+        timerIsRunning = true;
+        extraTime -= 6.0f;
+        SetMoveSpeed();
+        PlayCanvas();
     }
 }
