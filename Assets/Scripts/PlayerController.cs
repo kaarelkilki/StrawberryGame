@@ -31,6 +31,10 @@ public class PlayerController : MonoBehaviour
     private Canvas gameOverCanvas;
     [SerializeField]
     private Button extraTimeButton;
+    [SerializeField]
+    private Button adsButton;
+    [SerializeField]
+    private TMP_Text extraTimeText;
 
     Scene scene;
 
@@ -57,6 +61,10 @@ public class PlayerController : MonoBehaviour
 
         TimerRunning();
         LoadNextLevel();
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            MenuCanvas();
+        }
     }
 
     void FixedUpdate()
@@ -110,8 +118,7 @@ public class PlayerController : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            menuCanvas.enabled = true;
-            NotPlayCanvas();
+            MenuCanvas();
         }
         else if (SceneManager.GetActiveScene().buildIndex == 1)
         {
@@ -311,6 +318,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void MenuCanvas()
+    {
+        moveSpeed = 0;
+        menuCanvas.enabled = true;
+        gameOverCanvas.enabled = false;
+        playCanvas.enabled = false;
+        if (extraTime > 0.0f)
+        {
+            adsButton.gameObject.SetActive(false);
+            extraTimeText.gameObject.SetActive(true);
+            extraTimeText.text = extraTime + "s";
+        }
+        else if (extraTime <= 0.0f)
+        {
+            adsButton.gameObject.SetActive(true);
+            extraTimeText.gameObject.SetActive(false);
+        }
+    }
+
     void TimerStarter()
     {
         // Starts the timer automatically
@@ -378,10 +404,11 @@ public class PlayerController : MonoBehaviour
 
     public void AddExtraTime()
     {
-        timeRemaining += 6.0f;
+        timeRemaining = timeRemaining + 6.0f;
         timerIsRunning = true;
-        extraTime -= 6.0f;
+        extraTime = extraTime - 6.0f;
         SetMoveSpeed();
         PlayCanvas();
+        SavePlayer();
     }
 }

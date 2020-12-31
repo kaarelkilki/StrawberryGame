@@ -25,7 +25,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
             //Give 12 extra seconds to use
             GameObject ursus = GameObject.Find("Ursus");
             PlayerController playerController = ursus.GetComponent<PlayerController>();
-            playerController.extraTime += 12.0f;
+            playerController.extraTime = 12.0f;
         }
         else if (showResult == ShowResult.Failed)
         {
