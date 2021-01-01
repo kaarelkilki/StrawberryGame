@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public float extraTime;
     public bool timerIsRunning = false;
     
+    private bool goLeft = false;
+    private bool goRight = false;
     private Vector3 moveDir;
     private Rigidbody rb;
 
@@ -53,11 +55,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //moves player left and right
-        moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, 0).normalized;
+        //moves player left and right on computer
+        //moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, 0).normalized;
 
-        //player movement in Android device
-        //PlayerLeftRight();
+        //player movement on Android device
+        PlayerLeftRight();
+        
+        goRight = false;
+        goLeft = false;
 
         TimerRunning();
         LoadNextLevel();
@@ -346,21 +351,40 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void MoveLeft()
+    {
+        goLeft = true;
+    }
+
+    public void MoveRight()
+    {
+        goRight = true;
+    }
     void PlayerLeftRight()
     {
         //player movement in Android device
-        //if (Input.touchCount > 0)
-        //{
-        //    Touch touch = Input.GetTouch(0);
-        //    if (touch.position.x > (Screen.width / 2))
-        //    {
-        //        GoRight();
-        //    }
-        //    if (touch.position.x < (Screen.width / 2))
-        //    {
-        //        GoLeft();
-        //    }
-        //}
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.position.x > (Screen.width / 2))
+            {
+                //GoRight();
+                MoveRight();
+                if (goRight == true)
+                {
+                    moveDir = new Vector3(1, 0, 0).normalized;
+                }
+            }
+            if (touch.position.x < (Screen.width / 2))
+            {
+                //GoLeft();
+                MoveLeft();
+                if (goLeft ==  true)
+                {
+                    moveDir = new Vector3(-1, 0, 0).normalized;
+                }
+            }
+        }
     }
 
     void SavePlayer()
