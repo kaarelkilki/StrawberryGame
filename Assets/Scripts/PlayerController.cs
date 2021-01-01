@@ -33,8 +33,8 @@ public class PlayerController : MonoBehaviour
     private Button extraTimeButton;
     [SerializeField]
     private Button adsButton;
-    [SerializeField]
-    private TMP_Text extraTimeText;
+    //[SerializeField]
+    //private TMP_Text extraTimeText;
 
     Scene scene;
 
@@ -327,13 +327,13 @@ public class PlayerController : MonoBehaviour
         if (extraTime > 0.0f)
         {
             adsButton.gameObject.SetActive(false);
-            extraTimeText.gameObject.SetActive(true);
-            extraTimeText.text = extraTime + "s";
+            //extraTimeText.gameObject.SetActive(true);
+            //extraTimeText.text = extraTime + "s";
         }
         else if (extraTime <= 0.0f)
         {
             adsButton.gameObject.SetActive(true);
-            extraTimeText.gameObject.SetActive(false);
+            //extraTimeText.gameObject.SetActive(false);
         }
     }
 
@@ -376,11 +376,6 @@ public class PlayerController : MonoBehaviour
         timeRemaining = data.timeRemaining;
         highScore = data.highScore;
         extraTime = data.extraTime;
-
-        //Vector3 position;
-        //position.x = data.position[0];
-        //position.y = data.position[1];
-        //position.z = data.position[2];
     }
 
     public void ExitButton()

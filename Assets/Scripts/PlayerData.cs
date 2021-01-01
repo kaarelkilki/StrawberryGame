@@ -9,18 +9,12 @@ public class PlayerData
     public float timeRemaining;
     public int highScore;
     public float extraTime;
-    //public float[] position;
-
+    
     public PlayerData(PlayerController player)
     {
         count = player.count;
         timeRemaining = player.timeRemaining;
         highScore = player.highScore;
         extraTime = player.extraTime;
-
-        //position = new float[3];
-        //position[0] = player.transform.position.x;
-        //position[1] = player.transform.position.y;
-        //position[2] = player.transform.position.z;
     }
 }
