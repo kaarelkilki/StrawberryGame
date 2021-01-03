@@ -56,13 +56,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //moves player left and right on computer
-        //moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, 0).normalized;
+        #if UNITY_EDITOR
+            moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, 0).normalized;
+        #endif
 
         //player movement on Android device
-        PlayerLeftRight();
+        #if UNITY_ANDROID
+            PlayerLeftRight();
         
-        goRight = false;
-        goLeft = false;
+            goRight = false;
+            goLeft = false;
+        #endif
 
         TimerRunning();
         LoadNextLevel();
