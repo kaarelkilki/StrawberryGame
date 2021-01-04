@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public TMP_Text scoreText;
+    public TMP_Text scoreTextGameOver;
     public TMP_Text levelText;
     public TMP_Text highScoreText;
     public TMP_Text timeText;
@@ -163,6 +164,7 @@ public class PlayerController : MonoBehaviour
     void SetScoreText()
     {
         scoreText.text = count.ToString() + "  <sprite=0>";
+        scoreTextGameOver.text = count.ToString() + "  <sprite=0>";
         if (count >= highScore)
         {
             highScore = count;
@@ -356,6 +358,10 @@ public class PlayerController : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == (1 | 2 | 3 | 4 | 5 | 6))
         {
             timerIsRunning = true;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            timerIsRunning = false;
         }
     }
 

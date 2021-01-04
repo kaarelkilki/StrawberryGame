@@ -498,8 +498,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0048c5fed6b895c4aac7d3c5b6b49af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 8
   scoreText: {fileID: 0}
+  scoreTextGameOver: {fileID: 0}
   levelText: {fileID: 0}
   highScoreText: {fileID: 0}
   timeText: {fileID: 0}
@@ -508,7 +509,7 @@ MonoBehaviour:
   highScore: 0
   timeRemaining: 30
   extraTime: 0
-  timerIsRunning: 0
+  timerIsRunning: 1
   menuCanvas: {fileID: 0}
   playCanvas: {fileID: 0}
   gameOverCanvas: {fileID: 0}

@@ -334,6 +334,18 @@ PrefabInstance:
       objectReference: {fileID: 236413921}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7395cf0cf37b294e822b2cefe70f509, type: 3}
+--- !u!114 &56093640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8153239991402760027, guid: c7395cf0cf37b294e822b2cefe70f509,
+    type: 3}
+  m_PrefabInstance: {fileID: 56093639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &79095325 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8553786536333089544, guid: 1c4c194cc45b55b46afcd2798f434eb3,
@@ -1241,16 +1253,6 @@ PrefabInstance:
       objectReference: {fileID: 1798931872}
     - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
-        type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 2101413020}
@@ -1276,24 +1278,19 @@ PrefabInstance:
       objectReference: {fileID: 8478429870835601732}
     - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
         type: 3}
-      propertyPath: timeRemaining
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
-        type: 3}
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 1789531735}
     - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
         type: 3}
-      propertyPath: timerIsRunning
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
-        type: 3}
       propertyPath: extraTimeButton
       value: 
       objectReference: {fileID: 1993307990}
+    - target: {fileID: 1361801354110009950, guid: 2c68e3b054411d941b60546b44c00655,
+        type: 3}
+      propertyPath: scoreTextGameOver
+      value: 
+      objectReference: {fileID: 56093640}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c68e3b054411d941b60546b44c00655, type: 3}
 --- !u!1001 &8478429870835601730
