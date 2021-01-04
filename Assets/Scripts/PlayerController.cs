@@ -13,7 +13,8 @@ public class PlayerController : MonoBehaviour
     public TMP_Text levelText;
     public TMP_Text highScoreText;
     public TMP_Text timeText;
-    
+    public AudioSource collectStrawberry;
+
     public int count;
     public int highScore;
     public float timeRemaining = 30;
@@ -51,6 +52,8 @@ public class PlayerController : MonoBehaviour
         SetScoreText();
         SetLevelText();
         TimerStarter();
+
+        collectStrawberry.Stop();
     }
 
     void Update()
@@ -89,6 +92,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Collectable"))
         {
+            collectStrawberry.Play();
             other.gameObject.SetActive(false);
             count = count + 1;
             SetScoreText();
