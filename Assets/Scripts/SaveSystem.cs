@@ -8,7 +8,7 @@ public static class SaveSystem
     {
         BinaryFormatter formatter = new BinaryFormatter();
 
-        string path = Application.persistentDataPath + "/player.fun";
+        string path = Path.Combine(Application.persistentDataPath, "/player.fun");
         FileStream stream = new FileStream(path, FileMode.Create);
 
         PlayerData data = new PlayerData(player);
@@ -18,8 +18,8 @@ public static class SaveSystem
     }
     public static PlayerData LoadPlayer()
     {
-        string path = Application.persistentDataPath + "/player.fun";
-        if(File.Exists(path))
+        string path = Path.Combine(Application.persistentDataPath, "/player.fun");
+        if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
@@ -31,7 +31,7 @@ public static class SaveSystem
         }
         else
         {
-            Debug.LogError("Save file not found in " + path);
+            //Debug.LogError("Save file not found in " + path);
             return null;
         }
     }

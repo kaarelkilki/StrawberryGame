@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         LoadPlayer();
+        SavePlayer();
         rb = GetComponent<Rigidbody>();
 
         SetMoveSpeed();
