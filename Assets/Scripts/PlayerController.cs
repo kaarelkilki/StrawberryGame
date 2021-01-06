@@ -404,6 +404,11 @@ public class PlayerController : MonoBehaviour
 
     void SavePlayer()
     {
+        ES3.Save("count", count);
+        ES3.Save("timeRemaining", timeRemaining);
+        ES3.Save("highScore", highScore);
+        ES3.Save("extraTime", extraTime);
+
         //ES3AutoSaveMgr.Current.Save();
 
         //SaveSystem.SavePlayer(this);
@@ -411,6 +416,15 @@ public class PlayerController : MonoBehaviour
 
     void LoadPlayer()
     {
+        if (ES3.KeyExists("count"))
+            count = ES3.Load<int>("count");
+        if (ES3.KeyExists("timeRemaining"))
+            timeRemaining = ES3.Load<float>("timeRemaining");
+        if (ES3.KeyExists("highScore"))
+            highScore = ES3.Load<int>("highScore");
+        if (ES3.KeyExists("extraTime"))
+            extraTime = ES3.Load<float>("extraTime");
+
         //ES3AutoSaveMgr.Current.Load();
 
         //PlayerData data = SaveSystem.LoadPlayer();
@@ -423,6 +437,7 @@ public class PlayerController : MonoBehaviour
 
     public void ExitButton()
     {
+        count = 0;
         SavePlayer();
         Application.Quit();
         Debug.Log("quit");
