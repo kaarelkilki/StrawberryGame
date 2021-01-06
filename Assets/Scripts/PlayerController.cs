@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     private bool goLeft = false;
     private bool goRight = false;
     private Vector3 moveDir;
-    private Rigidbody rb;
+    public Rigidbody rb;
 
     [SerializeField]
     private Canvas menuCanvas;
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         LoadPlayer();
         SavePlayer();
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
 
         SetMoveSpeed();
         SetCanvas();
@@ -404,17 +404,21 @@ public class PlayerController : MonoBehaviour
 
     void SavePlayer()
     {
-        SaveSystem.SavePlayer(this);
+        //ES3AutoSaveMgr.Current.Save();
+
+        //SaveSystem.SavePlayer(this);
     }
 
     void LoadPlayer()
     {
-        PlayerData data = SaveSystem.LoadPlayer();
+        //ES3AutoSaveMgr.Current.Load();
 
-        count = data.count;
-        timeRemaining = data.timeRemaining;
-        highScore = data.highScore;
-        extraTime = data.extraTime;
+        //PlayerData data = SaveSystem.LoadPlayer();
+
+        //count = data.count;
+        //timeRemaining = data.timeRemaining;
+        //highScore = data.highScore;
+        //extraTime = data.extraTime;
     }
 
     public void ExitButton()

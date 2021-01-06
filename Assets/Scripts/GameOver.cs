@@ -15,9 +15,11 @@ public class GameOver : MonoBehaviour
 
     private void Start()
     {
+        scoreText.text = GameObject.Find("Ursus").GetComponent<PlayerController>().count.ToString();
+        
         // Starts the timer automatically
         timerIsRunning = true;
-        scoreText.text = GameObject.Find("Ursus").GetComponent<PlayerController>().count.ToString();
+        
         GameObject[] objs = GameObject.FindGameObjectsWithTag("aplause");
 
         if (objs.Length > 1)

@@ -56,27 +56,33 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs" />
-    <Compile Include="Assets\Plugins\GitHub\Editor\ExtensionLoader.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ToolsWindow.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3GlobalReferencesEditor.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3EditorUtility.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\AutoSaveWindow.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3InspectorInfoEditor.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3Postprocessor.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3ReferenceMgrEditor.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ReferencesWindow.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3PlayMakerEditor.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\HomeWindow.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\AddES3Prefab.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3Window.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\SettingsWindow.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3SettingsEditor.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3PrefabEditor.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3EditorStyle.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\TypesWindow.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3AutoSaveEditor.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3AutoSaveMgrEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\Plugins\GitHub\Editor\credits.txt" />
-     <None Include="Assets\Plugins\GitHub\Editor\eula.txt" />
-     <None Include="Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\GitHub.Logging.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\GitHub.Api.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\GitHub.Unity.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\System.Threading.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\sfw.net.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\Mono.Posix.dll" />
-     <None Include="Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll" />
+     <None Include="Assets\Plugins\Easy Save 3\Editor\ES3ValueTypeTemplate.txt" />
+     <None Include="Assets\Plugins\Easy Save 3\Editor\ES3ComponentTypeTemplate.txt" />
+     <None Include="Assets\Plugins\Easy Save 3\Editor\ES3TypeTemplate.txt" />
+     <None Include="Assets\Plugins\Easy Save 3\Editor\ES3Type_MaterialTemplate.txt" />
+     <None Include="Assets\Plugins\Easy Save 3\Editor\ES3ScriptableObjectTypeTemplate.txt" />
+     <None Include="Assets\Plugins\Easy Save 3\Editor\ES3ClassTypeTemplate.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -272,53 +278,20 @@
     <Reference Include="UnityEditor.WebGL.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.OSXStandalone.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\MacStandaloneSupport\UnityEditor.OSXStandalone.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.AppleTV.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.AppleTV.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UWP.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Lumin.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\LuminSupport\UnityEditor.Lumin.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="GitHub.Api.45">
-      <HintPath>Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll</HintPath>
-    </Reference>
-    <Reference Include="GitHub.Logging">
-      <HintPath>Assets\Plugins\GitHub\Editor\GitHub.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="GitHub.Unity.45">
-      <HintPath>Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll</HintPath>
-    </Reference>
-    <Reference Include="GitHub.UnityShim">
-      <HintPath>Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll</HintPath>
-    </Reference>
-    <Reference Include="sfw.net">
-      <HintPath>Assets\Plugins\GitHub\Editor\sfw.net.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.5\net35\unity-custom\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -724,10 +697,6 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{16AC9BB9-CDF5-885E-DC5B-577DFF06F54D}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
-    <ProjectReference Include="FMODUnityEditor.csproj">
-      <Project>{72C9EDD8-827D-15FF-536F-DFD3C9AF2D4E}</Project>
-      <Name>FMODUnityEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
