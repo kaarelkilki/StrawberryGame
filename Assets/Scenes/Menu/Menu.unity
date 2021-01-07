@@ -1250,11 +1250,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5590244883523900291, guid: 1c4c194cc45b55b46afcd2798f434eb3,
         type: 3}
-      propertyPath: m_PolyMesh.name
-      value: PolybrushMesh-25594
-      objectReference: {fileID: 0}
-    - target: {fileID: 5590244883523900291, guid: 1c4c194cc45b55b46afcd2798f434eb3,
-        type: 3}
       propertyPath: m_PolyMesh.m_Mesh
       value: 
       objectReference: {fileID: 1838638157}

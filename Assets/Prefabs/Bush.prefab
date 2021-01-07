@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9173648091131746511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5265835570911767260}
+  - component: {fileID: 3769239325787607274}
+  - component: {fileID: 7454458321195183123}
+  - component: {fileID: 7896617505762011903}
+  - component: {fileID: 6004718681110854283}
+  m_Layer: 0
+  m_Name: Bush
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5265835570911767260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9173648091131746511}
+  m_LocalRotation: {x: 0.9051283, y: 0.40237865, z: -0.07696389, w: -0.11362595}
+  m_LocalPosition: {x: 0.3551, y: -0.3196, z: -0.1277}
+  m_LocalScale: {x: 0.015000001, y: 0.014999995, z: 0.014999994}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3769239325787607274
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9173648091131746511}
+  m_Mesh: {fileID: -6592957211005202357, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+--- !u!23 &7454458321195183123
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9173648091131746511}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -8353045611882940227, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 5643567700883168680, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -7625106344046746107, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 3801723911794961010, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 3204926358171224100, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -8496018094776871776, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -6478536213147159724, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 7968041647805131780, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 242011745724976760, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 8803190970451786336, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -3866689888909731827, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -3591215900038412017, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 1251524395827194906, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -5406988533000840866, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -7655861425217062165, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -1187159757720130698, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 2889623979210473699, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -2990259530847231618, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -7727712007202784683, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -8417175157451636110, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 3644610139918520367, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 2716850412369234393, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 5024074084967167639, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -780536071923349148, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -4344437599079558505, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -4323033110899087483, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -6079940006377782197, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -5630112409803377719, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -9208001907324146148, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 5996196881219931728, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 8080586484389327156, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 8030733065159559945, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: 2046146161225693435, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  - {fileID: -3605631835819912111, guid: e9e3d06ed01bfe74b9f08e4615a99197, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7896617505762011903
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9173648091131746511}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!136 &6004718681110854283
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9173648091131746511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.2793871
+  m_Height: 5.4272637
+  m_Direction: 1
+  m_Center: {x: 0.0058733276, y: 4.0069327, z: -0.000000935542}

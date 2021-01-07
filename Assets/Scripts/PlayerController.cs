@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         LoadPlayer();
-        SavePlayer();
+        //SavePlayer();
         //rb = GetComponent<Rigidbody>();
 
         SetMoveSpeed();
@@ -166,16 +166,19 @@ public class PlayerController : MonoBehaviour
     {
         scoreText.text = count.ToString() + "  <sprite=0>";
         scoreTextGameOver.text = count.ToString() + "  <sprite=0>";
-        if (count >= highScore)
+        if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            highScore = count;
-            highScoreText.text = "<sprite=0>" + count.ToString();
-            SavePlayer();
-        }
-        else if (count < highScore)
-        {
-            highScoreText.text = "<sprite=0>" + highScore.ToString();
-            SavePlayer();
+            if (count >= highScore)
+            {
+                highScore = count;
+                highScoreText.text = "<sprite=0>" + count.ToString();
+                SavePlayer();
+            }
+            else if (count < highScore)
+            {
+                highScoreText.text = "<sprite=0>" + highScore.ToString();
+                //SavePlayer();
+            }
         }
     }
     

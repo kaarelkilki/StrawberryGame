@@ -8,7 +8,7 @@ using System.Threading;
 
 public class GameOver : MonoBehaviour
 {
-    public float timeRemaining = 3;
+    public float timeRemaining = 11;
     public bool timerIsRunning = false;
 
     public TMP_Text scoreText;
@@ -42,8 +42,6 @@ public class GameOver : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
             }
-        }
-
-        
+        }        
     }
 }
