@@ -5,12 +5,18 @@ using UnityEngine.Advertisements;
 
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
+#if UNITY_IOS
+    private string gameId = "3953950";
+#elif UNITY_ANDROID
+    private string gameId = "3953951";
+#endif
+
     string placement = "rewardedVideo";
     
     void Start()
     {
         Advertisement.AddListener(this);
-        Advertisement.Initialize("3953951", true);
+        Advertisement.Initialize(gameId, true);
     }
 
     public void ShowAd(string p)

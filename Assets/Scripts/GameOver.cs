@@ -8,15 +8,11 @@ using System.Threading;
 
 public class GameOver : MonoBehaviour
 {
-    public float timeRemaining = 11;
+    public float timeRemaining = 11.676f;
     public bool timerIsRunning = false;
-
-    public TMP_Text scoreText;
 
     private void Start()
     {
-        scoreText.text = GameObject.Find("Ursus").GetComponent<PlayerController>().count.ToString();
-        
         // Starts the timer automatically
         timerIsRunning = true;
         

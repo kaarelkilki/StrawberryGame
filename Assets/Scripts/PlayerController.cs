@@ -37,24 +37,18 @@ public class PlayerController : MonoBehaviour
     private Button extraTimeButton;
     [SerializeField]
     private Button adsButton;
-    //[SerializeField]
-    //private TMP_Text extraTimeText;
-
+    
     Scene scene;
 
     void Start()
     {
         LoadPlayer();
-        //SavePlayer();
-        //rb = GetComponent<Rigidbody>();
-
         SetMoveSpeed();
         SetCanvas();
         AddLevelTime();
         SetScoreText();
         SetLevelText();
         TimerStarter();
-
         collectStrawberry.Stop();
     }
 
@@ -74,6 +68,7 @@ public class PlayerController : MonoBehaviour
         #endif
 
         TimerRunning();
+        
         LoadNextLevel();
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
@@ -177,7 +172,6 @@ public class PlayerController : MonoBehaviour
             else if (count < highScore)
             {
                 highScoreText.text = "<sprite=0>" + highScore.ToString();
-                //SavePlayer();
             }
         }
     }
@@ -218,7 +212,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().buildIndex == 6)
         {
-            timeRemaining = 3.0f;
+            timeRemaining = 11.676f;
         }
     }
 
@@ -267,7 +261,6 @@ public class PlayerController : MonoBehaviour
     void WinScreen()
     {
         SceneManager.LoadScene("GameOver");
-        LoadPlayer();
     }
 
     void DisplayTime(float timeToDisplay)
@@ -346,13 +339,10 @@ public class PlayerController : MonoBehaviour
         if (extraTime > 0.0f)
         {
             adsButton.gameObject.SetActive(false);
-            //extraTimeText.gameObject.SetActive(true);
-            //extraTimeText.text = extraTime + "s";
         }
         else if (extraTime <= 0.0f)
         {
             adsButton.gameObject.SetActive(true);
-            //extraTimeText.gameObject.SetActive(false);
         }
     }
 
@@ -386,7 +376,6 @@ public class PlayerController : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             if (touch.position.x > (Screen.width / 2))
             {
-                //GoRight();
                 MoveRight();
                 if (goRight == true)
                 {
@@ -395,7 +384,6 @@ public class PlayerController : MonoBehaviour
             }
             if (touch.position.x < (Screen.width / 2))
             {
-                //GoLeft();
                 MoveLeft();
                 if (goLeft ==  true)
                 {
@@ -411,10 +399,6 @@ public class PlayerController : MonoBehaviour
         ES3.Save("timeRemaining", timeRemaining);
         ES3.Save("highScore", highScore);
         ES3.Save("extraTime", extraTime);
-
-        //ES3AutoSaveMgr.Current.Save();
-
-        //SaveSystem.SavePlayer(this);
     }
 
     void LoadPlayer()
@@ -427,15 +411,6 @@ public class PlayerController : MonoBehaviour
             highScore = ES3.Load<int>("highScore");
         if (ES3.KeyExists("extraTime"))
             extraTime = ES3.Load<float>("extraTime");
-
-        //ES3AutoSaveMgr.Current.Load();
-
-        //PlayerData data = SaveSystem.LoadPlayer();
-
-        //count = data.count;
-        //timeRemaining = data.timeRemaining;
-        //highScore = data.highScore;
-        //extraTime = data.extraTime;
     }
 
     public void ExitButton()
@@ -443,7 +418,6 @@ public class PlayerController : MonoBehaviour
         count = 0;
         SavePlayer();
         Application.Quit();
-        Debug.Log("quit");
     }
 
     public void PlayButton()
@@ -454,7 +428,6 @@ public class PlayerController : MonoBehaviour
 
     public void Menu()
     {
-        SavePlayer();
         SceneManager.LoadScene("Menu");
     }
 
@@ -465,6 +438,5 @@ public class PlayerController : MonoBehaviour
         extraTime = extraTime - 6.0f;
         SetMoveSpeed();
         PlayCanvas();
-        SavePlayer();
     }
 }
