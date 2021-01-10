@@ -56,220 +56,337 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\wrapper\fmod_errors.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\PlatformGroup.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\RuntimeUtils.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\ParamRef.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\PlatformMobileLow.cs" />
-    <Compile Include="Assets\Plugins\FMOD\platforms\android\src\PlatformAndroid.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\StudioEventEmitter.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\StudioGlobalParameterTrigger.cs" />
-    <Compile Include="Assets\Plugins\FMOD\platforms\html5\src\PlatformWebGL.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\Settings.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\Timeline\FMODEventPlayable.cs" />
-    <Compile Include="Assets\Plugins\FMOD\platforms\linux\src\PlatformLinux.cs" />
-    <Compile Include="Assets\Plugins\FMOD\platforms\tvos\src\PlatformAppleTV.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\wrapper\fmod.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\Timeline\FMODEventTrack.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\wrapper\fmod_dsp.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\ParamRefAttribute.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\wrapper\fmod_studio.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\CodeGeneration.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\StudioListener.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\EventRefAttribute.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\PlatformMobileHigh.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\BankRefAttribute.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\EventHandler.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\Platform.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\PlatformPlayInEditor.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\StudioParameterTrigger.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\PlatformDefault.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\FMODRuntimeManagerOnGUIHelper.cs" />
-    <Compile Include="Assets\Plugins\FMOD\platforms\ios\src\PlatformIOS.cs" />
-    <Compile Include="Assets\Plugins\FMOD\platforms\win\src\PlatformWindows.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\RuntimeManager.cs" />
-    <Compile Include="Assets\Plugins\FMOD\src\Runtime\StudioBankLoader.cs" />
-    <Compile Include="Assets\Plugins\FMOD\platforms\mac\src\PlatformMac.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Keyframe.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_ushort.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_string.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Auto Save\ES3AutoSaveMgr.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Matrix4x4.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3DictionaryType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_ExternalForcesModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_short.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\ES3ComponentType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_uint.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_MeshFilter.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3Prefab.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_SkinnedMeshRenderer.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\PlayMaker\ES3PlayMaker.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_NoiseModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3ListType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_Text.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Readers\ES3Reader.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_TextureSheetAnimationModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3Crypto.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Settings\ES3Settings.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3CollectionType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_PolygonCollider2D.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_intptr.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_RenderTexture.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_SizeOverLifetimeModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_ParticleSystem.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_ShapeModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Material.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Vector3.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedValueType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_decimal.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_BoxCollider.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_VelocityOverLifetimeModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Writers\ES3BinaryWriter.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Color.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_ColorOverLifetimeModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_ES3Ref.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_float.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Readers\ES3XMLReader.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\NET Types\ES3Type_Random.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_PhysicMaterial.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Writers\ES3CacheWriter.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_PhysicsMaterial2D.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Flare.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_TriggerModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES33DArrayType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_LightsModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3Spreadsheet.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Vector2Int.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_RotationOverLifetimeModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_LayerMask.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_byteArray.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_MinMaxGradient.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_TrailModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_Image.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_MainModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Writers\ES3XMLWriter.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Writers\ES3Binary.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedScriptableObjectType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3IO.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_AnimationCurve.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Vector2.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedUnityObjectType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Readers\ES3JSONReader.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_sbyte.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedComponentType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_RawImage.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_BoxCollider2D.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_RectTransform.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3StackType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Referencing\ES3GlobalReferences.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_GradientColorKey.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_RotationBySpeedModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_Camera.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Writers\ES3Writer.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_ColorBySpeedModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_byte.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Attributes\ES3Attributes.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Light.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_MeshCollider.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Debugging\ES3Debug.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Settings\ES3DefaultSettings.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_MeshRenderer.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Vector4.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_bool.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\ES3ObjectType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Color32.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Web\ES3WebClass.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Settings\ES3Defaults.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Shader.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\ES3ScriptableObjectType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Web\ES3Cloud.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_SphereCollider.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3InspectorInfo.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\ES3TypeMgr.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedObjectType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Gradient.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\ES3Type.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Writers\ES3JSONWriter.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Streams\ES3Stream.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_double.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3HashSetType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_EventSystem.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_long.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Bounds.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_AudioClip.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_SubEmittersModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_Rigidbody.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\ES3Property.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3ArrayType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Streams\ES3FileStream.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_LimitVelocityOverLifetimeModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_SizeBySpeedModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_Transform.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_ForceOverLifetimeModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_BoneWeight.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Streams\ES3ResourcesStream.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3File.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_EmissionModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\ES3UnityObjectType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Mesh.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_UIntPtr.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Texture2D.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3ReferenceMgrBase.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3SerializableDictionary.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Sprite.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Quaternion.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_MinMaxCurve.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_CapsuleCollider.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_int.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_CollisionModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Streams\ES3PlayerPrefsStream.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_char.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_InheritVelocityModule.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_SpriteRenderer.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Rect.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Vector3Int.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES32DArrayType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Auto Save\ES3AutoSave.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3QueueType.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Font.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3Reflection.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_ulong.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_GameObject.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3ReferenceMgr.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Texture.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_enum.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_GradientAlphaKey.cs" />
+    <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_DateTime.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\Plugins\FMOD\lib\win\x86_64\fmodstudioL.dll" />
-     <None Include="Assets\Plugins\FMOD\lib\win\x86_64\resonanceaudio.dll" />
+     <None Include="Assets\Plugins\Easy Save 3\Change Log\Change Log.txt" />
     <Reference Include="UnityEngine">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.AIModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.AIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ARModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.ARModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.ARModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AccessibilityModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AndroidJNIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.ClothModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.ClothModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CrashReportingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.DSPGraphModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.DirectorModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.DirectorModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.DirectorModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GameCenterModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.GameCenterModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GridModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.GridModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.GridModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HotReloadModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.HotReloadModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.InputModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.InputModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.LocalizationModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.LocalizationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PerformanceReportingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Physics2DModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.Physics2DModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ProfilerModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.ProfilerModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.ProfilerModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ScreenCaptureModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SharedInternalsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpriteMaskModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpriteShapeModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StreamingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.StreamingModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.StreamingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SubstanceModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.SubstanceModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SubsystemsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TLSModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.TLSModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.TLSModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TerrainModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.TerrainModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.TerrainModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TerrainPhysicsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextCoreModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.TextCoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TilemapModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.TilemapModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.TilemapModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.UIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIElementsNativeModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UIElementsNativeModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.UIElementsNativeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UNETModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UNETModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.UNETModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UmbraModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UmbraModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.UmbraModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityAnalyticsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityConnectModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityTestProtocolModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VFXModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.VFXModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.VFXModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VRModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.VRModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.VRModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VehiclesModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.VehiclesModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.VideoModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.VideoModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.WindModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.WindModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XRModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.XRModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed\UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
@@ -294,9 +411,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="FMODUnityEditor">
-      <HintPath>Library\ScriptAssemblies\FMODUnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.5\net35\unity-custom\nunit.framework.dll</HintPath>
