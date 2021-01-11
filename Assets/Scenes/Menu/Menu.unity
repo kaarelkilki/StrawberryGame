@@ -444,7 +444,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 8889383394664222075}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 772564775}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -608,6 +608,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &772564775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8889383393255107575, guid: 5be4074fc9284ab438147389c9c284ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 8889383394664222075}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &772564779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772564775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c002b02b24aeca48bb5bbb1c62c16eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPlacementId: rewardedVideo
 --- !u!114 &1603468792 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8553786536333089544, guid: 1c4c194cc45b55b46afcd2798f434eb3,
@@ -1188,10 +1207,60 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 796284138831681260, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Height
+      value: 6.303292
+      objectReference: {fileID: 0}
+    - target: {fileID: 796284138831681260, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Radius
+      value: 2.1673462
+      objectReference: {fileID: 0}
+    - target: {fileID: 796284138831681260, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.19908254
+      objectReference: {fileID: 0}
+    - target: {fileID: 796284138831681260, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 3.2475562
+      objectReference: {fileID: 0}
+    - target: {fileID: 796284138831681260, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.00000013597705
+      objectReference: {fileID: 0}
     - target: {fileID: 2149693513879353826, guid: 1c4c194cc45b55b46afcd2798f434eb3,
         type: 3}
       propertyPath: m_Name
       value: PlanetFragaria
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143229252117960582, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Height
+      value: 6.499525
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143229252117960582, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Radius
+      value: 2.241113
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143229252117960582, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.06642278
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143229252117960582, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 2.8622448
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143229252117960582, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.05614613
       objectReference: {fileID: 0}
     - target: {fileID: 3781963671108224490, guid: 1c4c194cc45b55b46afcd2798f434eb3,
         type: 3}
@@ -1253,6 +1322,56 @@ PrefabInstance:
       propertyPath: m_PolyMesh.m_Mesh
       value: 
       objectReference: {fileID: 1838638157}
+    - target: {fileID: 6434486114729481905, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Height
+      value: 6.170148
+      objectReference: {fileID: 0}
+    - target: {fileID: 6434486114729481905, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.7585263
+      objectReference: {fileID: 0}
+    - target: {fileID: 6434486114729481905, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.055865835
+      objectReference: {fileID: 0}
+    - target: {fileID: 6434486114729481905, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 3.2480264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6434486114729481905, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.0000031262507
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111514773357760394, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Height
+      value: 6.368706
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111514773357760394, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Radius
+      value: 2.0539434
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111514773357760394, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.05434243
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111514773357760394, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 3.2464607
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111514773357760394, guid: 1c4c194cc45b55b46afcd2798f434eb3,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.0000020798827
+      objectReference: {fileID: 0}
     - target: {fileID: 7296221529437009393, guid: 1c4c194cc45b55b46afcd2798f434eb3,
         type: 3}
       propertyPath: m_Mesh
@@ -1272,6 +1391,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 345481185}
+    - target: {fileID: 8889383393255107573, guid: 5be4074fc9284ab438147389c9c284ec,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8889383393255107573, guid: 5be4074fc9284ab438147389c9c284ec,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

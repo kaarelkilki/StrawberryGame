@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -22,8 +19,6 @@ public class PlayerController : MonoBehaviour
     public float extraTime;
     public bool timerIsRunning = false;
     
-    private bool goLeft = false;
-    private bool goRight = false;
     private Vector3 moveDir;
     public Rigidbody rb;
 
@@ -35,8 +30,8 @@ public class PlayerController : MonoBehaviour
     private Canvas gameOverCanvas;
     [SerializeField]
     private Button extraTimeButton;
-    [SerializeField]
-    private Button adsButton;
+    //[SerializeField]
+    //private Button adsButton;
     
     Scene scene;
 
@@ -62,9 +57,6 @@ public class PlayerController : MonoBehaviour
         //player movement on Android device
         #if UNITY_ANDROID
             PlayerLeftRight();
-        
-            goRight = false;
-            goLeft = false;
         #endif
 
         TimerRunning();
@@ -319,15 +311,15 @@ public class PlayerController : MonoBehaviour
         moveSpeed = 0;
         gameOverCanvas.enabled = true;
         menuCanvas.enabled = false;
-        playCanvas.enabled = false;
-        if (extraTime > 0.0f)
-        {
-            extraTimeButton.gameObject.SetActive(true);
-        }
-        else if (extraTime <= 0.0f)
-        {
-            extraTimeButton.gameObject.SetActive(false);
-        }
+        //playCanvas.enabled = false;
+        //if (extraTime > 0.0f)
+        //{
+        //    extraTimeButton.gameObject.SetActive(true);
+        //}
+        //else if (extraTime <= 0.0f)
+        //{
+        //    extraTimeButton.gameObject.SetActive(false);
+        //}
     }
 
     void MenuCanvas()
@@ -336,14 +328,14 @@ public class PlayerController : MonoBehaviour
         menuCanvas.enabled = true;
         gameOverCanvas.enabled = false;
         playCanvas.enabled = false;
-        if (extraTime > 0.0f)
-        {
-            adsButton.gameObject.SetActive(false);
-        }
-        else if (extraTime <= 0.0f)
-        {
-            adsButton.gameObject.SetActive(true);
-        }
+        //if (extraTime > 0.0f)
+        //{
+        //    adsButton.gameObject.SetActive(false);
+        //}
+        //else if (extraTime <= 0.0f)
+        //{
+        //    adsButton.gameObject.SetActive(true);
+        //}
     }
 
     void TimerStarter()
@@ -358,37 +350,25 @@ public class PlayerController : MonoBehaviour
             timerIsRunning = false;
         }
     }
-
-    public void MoveLeft()
-    {
-        goLeft = true;
-    }
-
-    public void MoveRight()
-    {
-        goRight = true;
-    }
     void PlayerLeftRight()
     {
         //player movement in Android device
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-            if (touch.position.x > (Screen.width / 2))
+            if (touch.position.x > (Screen.width / 2) & touch.phase == TouchPhase.Began)
             {
-                MoveRight();
-                if (goRight == true)
-                {
-                    moveDir = new Vector3(1, 0, 0).normalized;
-                }
+                moveDir = new Vector3(1, 0, 0).normalized;
             }
-            if (touch.position.x < (Screen.width / 2))
+            
+            if (touch.position.x < (Screen.width / 2) & touch.phase == TouchPhase.Began)
             {
-                MoveLeft();
-                if (goLeft ==  true)
-                {
-                    moveDir = new Vector3(-1, 0, 0).normalized;
-                }
+                moveDir = new Vector3(-1, 0, 0).normalized;
+            }
+
+            if (touch.phase == TouchPhase.Ended)
+            {
+                moveDir = new Vector3(0, 0, 0).normalized;
             }
         }
     }

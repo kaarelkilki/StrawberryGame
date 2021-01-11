@@ -16,7 +16,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     void Start()
     {
         Advertisement.AddListener(this);
-        Advertisement.Initialize(gameId, true);
+        Advertisement.Initialize(gameId, false);
     }
 
     public void ShowAd(string p)
