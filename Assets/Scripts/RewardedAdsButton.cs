@@ -56,7 +56,10 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsListener
         // Define conditional logic for each ad completion status:
         if (showResult == ShowResult.Finished)
         {
-            // Reward the user for watching the ad to completion.
+            //Give 12 extra seconds to use
+            GameObject ursus = GameObject.Find("Ursus");
+            PlayerController playerController = ursus.GetComponent<PlayerController>();
+            playerController.extraTime = 12.0f;
         }
         else if (showResult == ShowResult.Skipped)
         {
