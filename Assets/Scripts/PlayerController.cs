@@ -311,15 +311,15 @@ public class PlayerController : MonoBehaviour
         moveSpeed = 0;
         gameOverCanvas.enabled = true;
         menuCanvas.enabled = false;
-        //playCanvas.enabled = false;
-        //if (extraTime > 0.0f)
-        //{
-        //    extraTimeButton.gameObject.SetActive(true);
-        //}
-        //else if (extraTime <= 0.0f)
-        //{
-        //    extraTimeButton.gameObject.SetActive(false);
-        //}
+        playCanvas.enabled = false;
+        if (extraTime > 0.0f)
+        {
+            extraTimeButton.gameObject.SetActive(true);
+        }
+        else if (extraTime <= 0.0f)
+        {
+            extraTimeButton.gameObject.SetActive(false);
+        }
     }
 
     void MenuCanvas()
