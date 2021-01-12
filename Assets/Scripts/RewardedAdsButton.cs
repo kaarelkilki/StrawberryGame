@@ -14,9 +14,12 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsListener
 
     Button myButton;
     public string myPlacementId = "rewardedVideo";
+    public float timeRemaining = 4;
+    public bool timerIsRunning = false;
 
     void Start()
     {
+        
         myButton = GetComponent<Button>();
 
         // Set interactivity to be dependent on the Placement’s status:
@@ -45,9 +48,10 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsListener
             myButton.gameObject.SetActive(true);
             myButton.interactable = true;
         }
-        else
+        else if (GameObject.Find("Ursus").GetComponent<PlayerController>().extraTime > 0.0f)
         {
             myButton.gameObject.SetActive(false);
+            myButton.interactable = false;
         }
     }
 
@@ -63,6 +67,9 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsListener
         }
         else if (showResult == ShowResult.Skipped)
         {
+            timerIsRunning = true;
+            timeRemaining = 4;
+            TimerRunning();            
             // Do not reward the user for skipping the ad.
         }
         else if (showResult == ShowResult.Failed)
@@ -79,5 +86,23 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsListener
     public void OnUnityAdsDidStart(string placementId)
     {
         // Optional actions to take when the end-users triggers an ad.
+    }
+
+    void TimerRunning()
+    {
+        if (timerIsRunning)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                GameObject.Find("AdDidNotFinishText").SetActive(true);
+            }
+            else
+            {
+                timeRemaining = 0;
+                timerIsRunning = false;
+                GameObject.Find("AdDidNotFinishText").SetActive(false);
+            }
+        }
     }
 }
