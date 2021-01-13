@@ -43,14 +43,12 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsListener
     public void OnUnityAdsReady(string placementId)
     {
         // If the ready Placement is rewarded, activate the button: 
-        if (placementId == myPlacementId & GameObject.Find("Ursus").GetComponent<PlayerController>().extraTime <= 0.0f)
+        if (placementId == myPlacementId)
         {
-            myButton.gameObject.SetActive(true);
             myButton.interactable = true;
         }
-        else if (GameObject.Find("Ursus").GetComponent<PlayerController>().extraTime > 0.0f)
+        else
         {
-            myButton.gameObject.SetActive(false);
             myButton.interactable = false;
         }
     }

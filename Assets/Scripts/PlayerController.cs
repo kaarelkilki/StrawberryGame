@@ -30,9 +30,9 @@ public class PlayerController : MonoBehaviour
     private Canvas gameOverCanvas;
     [SerializeField]
     private Button extraTimeButton;
-    //[SerializeField]
-    //private Button adsButton;
-    
+    [SerializeField]
+    private Button adsButton;
+
     Scene scene;
 
     void Start()
@@ -328,14 +328,14 @@ public class PlayerController : MonoBehaviour
         menuCanvas.enabled = true;
         gameOverCanvas.enabled = false;
         playCanvas.enabled = false;
-        //if (extraTime > 0.0f)
-        //{
-        //    adsButton.gameObject.SetActive(false);
-        //}
-        //else if (extraTime <= 0.0f)
-        //{
-        //    adsButton.gameObject.SetActive(true);
-        //}
+        if (extraTime > 0.0f)
+        {
+            adsButton.gameObject.SetActive(false);
+        }
+        else if (extraTime <= 0.0f)
+        {
+            adsButton.gameObject.SetActive(true);
+        }
     }
 
     void TimerStarter()
