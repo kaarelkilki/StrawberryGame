@@ -21,7 +21,7 @@ public class ImageFade : MonoBehaviour
         if (fadeAway)
         {
             // loop over 3 second backwards
-            for (float i = 3; i >= 0; i -= Time.deltaTime)
+            for (float i = 4; i >= 0; i -= Time.deltaTime)
             {
                 // set color with i as alpha
                 imgLeft.color = new Color(1, 1, 1, i);
