@@ -74,7 +74,6 @@ public class PlayerController : MonoBehaviour
 
         // moves the player in it's front direction
         rb.MovePosition(rb.position + this.transform.forward * moveSpeed * Time.deltaTime);
-
     }
 
     private void OnTriggerEnter(Collider other)
