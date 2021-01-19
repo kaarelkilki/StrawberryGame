@@ -30,7 +30,21 @@ MonoBehaviour:
     serializationDepthLimit: 64
     assemblyNames:
     - Assembly-CSharp-firstpass
+    - SimpleWebTransport
+    - Mirror
+    - Telepathy
+    - Mirror.Cloud
+    - Mirror.Components
     - Assembly-CSharp
+    - Mirror.Examples
+    - Mirror.Examples.Cloud.GUI
+    - kcp2k
+    - Mirror.Examples.Cloud.Pong
+    - Mirror.Authenticators
+    - Mirror.Weaver
+    - Mirror.Editor
+    - ParrelSync
+    - Mirror.CompilerSymbols
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

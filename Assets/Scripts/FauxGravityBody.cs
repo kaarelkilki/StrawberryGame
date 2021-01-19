@@ -12,6 +12,7 @@ public class FauxGravityBody : MonoBehaviour
         GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
         GetComponent<Rigidbody>().useGravity = false;
         myTransform = transform;
+        attractor = (FauxGravityAtractor)FindObjectOfType(typeof(FauxGravityAtractor));
     }
     void Update()
     {

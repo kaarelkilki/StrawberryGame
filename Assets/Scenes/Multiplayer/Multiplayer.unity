@@ -341,6 +341,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasGameOver
       objectReference: {fileID: 0}
+    - target: {fileID: 8153239991935404820, guid: c7395cf0cf37b294e822b2cefe70f509,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7395cf0cf37b294e822b2cefe70f509, type: 3}
 --- !u!1 &394716924
@@ -838,6 +843,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8478429871313547914, guid: c0074b305ecd3c343b9324f6dedd8366,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8478429871313547918, guid: c0074b305ecd3c343b9324f6dedd8366,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1278,6 +1288,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8889383394471079603, guid: 5be4074fc9284ab438147389c9c284ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8889383394471079607, guid: 5be4074fc9284ab438147389c9c284ec,
         type: 3}

@@ -6,7 +6,8 @@ using Mirror;
 
 public class MultiplayerControler : NetworkBehaviour
 {
-    // https://www.youtube.com/watch?v=8VVgIjWBXks at 21:07
+    // https://www.youtube.com/watch?v=8VVgIjWBXks at 21.06
+
     public float moveSpeed;
     public AudioSource collectStrawberry;
     public TMP_Text scoreText;
@@ -25,18 +26,7 @@ public class MultiplayerControler : NetworkBehaviour
 
     void Update()
     {
-        //moves player left and right on computer
-        #if UNITY_EDITOR
-            if (isLocalPlayer)
-            {
-                moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, 0).normalized;
-            }
-        #endif
-
-        //player movement on Android device
-#if UNITY_ANDROID
-            PlayerLeftRight();
-#endif
+        PlayerLeftRight();
     }
 
     void FixedUpdate()
@@ -60,6 +50,8 @@ public class MultiplayerControler : NetworkBehaviour
         if (isLocalPlayer)
         {
             //player movement in Android device
+        #if UNITY_ANDROID
+            
             if (Input.touchCount > 0)
             {
                 Touch touch = Input.GetTouch(0);
@@ -78,6 +70,12 @@ public class MultiplayerControler : NetworkBehaviour
                     moveDir = new Vector3(0, 0, 0).normalized;
                 }
             }
+        #endif
+
+            //moves player left and right on computer
+        #if UNITY_EDITOR
+                moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, 0).normalized;
+        #endif
         }
     }
 }
