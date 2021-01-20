@@ -174,7 +174,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: io.RaadikoTalu.Ursusxfragaria
   buildNumber: {}
-  AndroidBundleVersionCode: 12
+  AndroidBundleVersionCode: 13
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 29
   AndroidPreferredInstallLocation: 1

@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Button adsButton;
 
+    private int LastFingerIndex;
+
     Scene scene;
 
     void Start()
@@ -354,18 +356,27 @@ public class PlayerController : MonoBehaviour
         //player movement in Android device
         if (Input.touchCount > 0)
         {
-            Touch touch = Input.GetTouch(0);
-            if (touch.position.x > (Screen.width / 2) & touch.phase == TouchPhase.Began)
+            //Touch touch = Input.GetTouch(0);
+            Touch lastTouch = Input.GetTouch(0);
+            if (Input.touches.Length > 0)
+            {
+                lastTouch = Input.touches[Input.touches.Length - 1];
+            }
+            
+            if (lastTouch.position.x > (Screen.width / 2))
             {
                 moveDir = new Vector3(1, 0, 0).normalized;
             }
-            
-            if (touch.position.x < (Screen.width / 2) & touch.phase == TouchPhase.Began)
+            else if (lastTouch.position.x < (Screen.width / 2))
             {
                 moveDir = new Vector3(-1, 0, 0).normalized;
             }
+            else if (lastTouch.position.x > (Screen.width / 2) & lastTouch.position.x < (Screen.width / 2))
+            {
+                moveDir = new Vector3(0, 0, 0).normalized;
+            }
 
-            if (touch.phase == TouchPhase.Ended)
+            if (lastTouch.phase == TouchPhase.Ended)
             {
                 moveDir = new Vector3(0, 0, 0).normalized;
             }

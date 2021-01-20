@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 4484591694934107835}
   - component: {fileID: 5965966432971890992}
   - component: {fileID: -8379786192145658794}
+  - component: {fileID: 8506969756215953825}
   m_Layer: 0
   m_Name: MultiplayerUrsus
   m_TagString: Untagged
@@ -335,7 +336,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3232018275129751627}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 37e2b419cffab224b97ce41cf01583ad, type: 3}
@@ -455,10 +456,27 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   moveSpeed: 0
-  collectStrawberry: {fileID: 0}
   scoreText: {fileID: 0}
   timeText: {fileID: 0}
   count: 0
+--- !u!114 &8506969756215953825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3232018275129751627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
 --- !u!1 &3232018275301458138
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,7 +870,7 @@ GameObject:
   - component: {fileID: 4484591693819101508}
   - component: {fileID: 4484591693819101509}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: Main Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
