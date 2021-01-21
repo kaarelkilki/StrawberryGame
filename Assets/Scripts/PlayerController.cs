@@ -33,8 +33,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Button adsButton;
 
-    private int LastFingerIndex;
-
     Scene scene;
 
     void Start()
