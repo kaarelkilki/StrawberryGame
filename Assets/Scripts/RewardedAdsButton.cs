@@ -30,7 +30,7 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsListener
 
         // Initialize the Ads listener and service:
         Advertisement.AddListener(this);
-        Advertisement.Initialize(gameId, false);
+        Advertisement.Initialize(gameId, true);
     }
 
     // Implement a function for showing a rewarded video ad:
@@ -47,6 +47,10 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsListener
         {
             myButton.interactable = true;
         }
+        else if (myButton == null)
+        {
+            return;
+        }
         else
         {
             myButton.interactable = false;
@@ -60,8 +64,8 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsListener
         {
             //Give 12 extra seconds to use
             GameObject ursus = GameObject.Find("Ursus");
-            PlayerController playerController = ursus.GetComponent<PlayerController>();
-            playerController.extraTime = 12.0f;
+            EndlessRunner endlessRunner = ursus.GetComponent<EndlessRunner>();
+            endlessRunner.lives = 2;
         }
         else if (showResult == ShowResult.Skipped)
         {

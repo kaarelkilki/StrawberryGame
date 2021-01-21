@@ -8,6 +8,8 @@ public class EndlessRunner : MonoBehaviour
     public float moveSpeed;
     public TMP_Text scoreText;
     public TMP_Text highScoreText;
+    public TMP_Text playLivesText;
+    public TMP_Text menuLivesText;
     public AudioSource collectStrawberry;
 
     public int count;
@@ -16,6 +18,7 @@ public class EndlessRunner : MonoBehaviour
 
     private Vector3 moveDir;
     public int lives;
+    bool collision;
 
     [SerializeField]
     private Canvas menuCanvas;
@@ -28,16 +31,17 @@ public class EndlessRunner : MonoBehaviour
 
     void Start()
     {
+        //lives = 0;
         collectStrawberry.Stop();
         LoadPlayer();
         MenuCanvas();
-        SetScoreText();
+        SetText();
     }
 
     void Update()
     {
         PlayerLeftRight();
-        SetMoveSpeed();
+        ActivateAdsButton();
     }
 
     void FixedUpdate()
@@ -55,47 +59,54 @@ public class EndlessRunner : MonoBehaviour
             collectStrawberry.Play();
             other.gameObject.SetActive(false);
             count = count + 1;
-            SetScoreText();
+            if (count >= 5)
+            {
+                moveSpeed += (count / 50);
+            }
+            SetText();
         }
     }
 
-    void OnCollisionEnter(Collision coll)
+    private void OnCollisionEnter(Collision coll)
     {
-        if (lives < 1)
+        if (coll.gameObject.CompareTag("Obstacles") && collision == false)
         {
-            SavePlayer();
-            SceneManager.LoadScene("EndlessRunner");
-        }
-        else
-        {
-            lives -= 1;
+            collision = true;
+            if (lives < 0)
+            {
+                SavePlayer();
+                SceneManager.LoadScene("EndlessRunner");
+            }
+            else if (lives >= 0)
+            {
+                lives = lives - 1;
+                SetText();
+            }
         }
     }
 
-    void SetMoveSpeed()
+    private void OnCollisionExit(Collision coll)
     {
-        if (playCanvas.enabled == true && count < 5)
+        if (coll.gameObject.CompareTag("Obstacles") && collision == true)
         {
-            moveSpeed = 8;
-        }
-        else if (count >= 5)
-        {
-            moveSpeed += count / 5;
+            collision = false;
         }
     }
 
-    void SetScoreText()
+    void SetText()
     {
-        scoreText.text = count.ToString() + " / " + highScore.ToString() + "  <sprite=0>";
-        
+        playLivesText.text = (lives + 1).ToString() + "   <sprite=2>";
+        menuLivesText.text = (lives + 1).ToString() + "   <sprite=2>";
         if (count >= highScore)
         {
             highScore = count;
             highScoreText.text = "<sprite=0>" + count.ToString();
+            scoreText.text = "<sprite=0>" + count.ToString() + "/" + count.ToString();
         }
         else if (count < highScore)
         {
             highScoreText.text = "<sprite=0>" + highScore.ToString();
+            scoreText.text = "<sprite=0>" + count.ToString() + "/" + highScore.ToString();
         }
     }
 
@@ -142,6 +153,23 @@ public class EndlessRunner : MonoBehaviour
         moveSpeed = 0;
         menuCanvas.enabled = true;
         playCanvas.enabled = false;
+        
+    }
+
+    void ActivateAdsButton()
+    {
+        if (menuCanvas.enabled == true)
+        {
+            if (lives <= 1)
+            {
+                adsButton.gameObject.SetActive(true);
+            }
+            else if (lives > 1)
+            {
+                adsButton.gameObject.SetActive(false);
+                SetText();
+            }
+        }
     }
 
     void SavePlayer()
@@ -163,6 +191,8 @@ public class EndlessRunner : MonoBehaviour
 
     public void PlayButton()
     {
-        
+        moveSpeed = 8;
+        menuCanvas.enabled = false;
+        playCanvas.enabled = true;
     }
 }
