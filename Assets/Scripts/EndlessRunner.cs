@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -19,6 +20,7 @@ public class EndlessRunner : MonoBehaviour
     private Vector3 moveDir;
     public int lives;
     bool collision;
+    bool collection;
 
     [SerializeField]
     private Canvas menuCanvas;
@@ -59,11 +61,11 @@ public class EndlessRunner : MonoBehaviour
             collectStrawberry.Play();
             other.gameObject.SetActive(false);
             count = count + 1;
-            if (count >= 5)
-            {
-                moveSpeed += (count / 50);
-            }
-            SetText();
+            //if (count >= 5)
+            //{
+            //    moveSpeed += (count % 5);
+            //}
+            //SetText();
         }
     }
 

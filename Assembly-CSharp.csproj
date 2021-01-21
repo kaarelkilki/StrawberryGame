@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Easy Save 3\Types\ES3UserType_PlayerController.cs" />
     <Compile Include="Assets\Scripts\RewardedAdsButton.cs" />
+    <Compile Include="Assets\Scripts\EndlessRunner.cs" />
     <Compile Include="Assets\Scripts\FauxGravityBody.cs" />
     <Compile Include="Assets\Scripts\MultiplayerControler.cs" />
     <Compile Include="Assets\Scripts\Rotator.cs" />
@@ -69,7 +70,8 @@
     <Compile Include="Assets\Scripts\ImageFade.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\AdsManager.cs" />
-    <Compile Include="Assets\Scripts\EndlessRunner.cs" />
+    <Compile Include="Assets\Scripts\StrawberrySpawner.cs" />
+    <Compile Include="Assets\ActivateStrawberriesAgain.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
