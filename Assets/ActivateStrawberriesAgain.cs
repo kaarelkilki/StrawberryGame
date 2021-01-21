@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class ActivateStrawberriesAgain : MonoBehaviour
 {
-    public float sec = 1f;
+    public float sec = 14f;
  
-    void Start()
-    {
-
-    }
     void Update()
     {
-        if (transform.GetChild(0).gameObject.ActiveInHierarchy == false)
+        if (transform.GetChild(0).gameObject.activeInHierarchy == false)
         {
             StartCoroutine(LateCall());
+        }
+        if (transform.GetChild(1).gameObject.activeInHierarchy == false)
+        {
+            StartCoroutine(LateCall1());
         }
     }
 
@@ -24,6 +24,13 @@ public class ActivateStrawberriesAgain : MonoBehaviour
         yield return new WaitForSeconds(sec);
 
         transform.GetChild(0).gameObject.SetActive(true);
-        //Do Function here...
+    }
+    
+    IEnumerator LateCall1()
+    {
+
+        yield return new WaitForSeconds(sec);
+
+        transform.GetChild(1).gameObject.SetActive(true);
     }
 }

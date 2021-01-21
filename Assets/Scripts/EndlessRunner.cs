@@ -61,11 +61,11 @@ public class EndlessRunner : MonoBehaviour
             collectStrawberry.Play();
             other.gameObject.SetActive(false);
             count = count + 1;
-            //if (count >= 5)
-            //{
-            //    moveSpeed += (count % 5);
-            //}
-            //SetText();
+            if (count >= 5)
+            {
+                moveSpeed = 8 + (count / 5);
+            }
+            SetText();
         }
     }
 
