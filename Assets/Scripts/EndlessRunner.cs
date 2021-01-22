@@ -11,6 +11,7 @@ public class EndlessRunner : MonoBehaviour
     public TMP_Text highScoreText;
     public TMP_Text playLivesText;
     public TMP_Text menuLivesText;
+    public TMP_Text endScoreText;
     public AudioSource collectStrawberry;
 
     public int count;
@@ -19,13 +20,17 @@ public class EndlessRunner : MonoBehaviour
 
     private Vector3 moveDir;
     public int lives;
+    public bool timerIsRunning = false;
+    public float timeRemaining = 3f;
+    private float inputTimer;
     bool collision;
-    bool collection;
-
+    
     [SerializeField]
     private Canvas menuCanvas;
     [SerializeField]
     private Canvas playCanvas;
+    [SerializeField]
+    private Canvas gameOverCanvas;
     [SerializeField]
     private Button adsButton;
 
@@ -33,17 +38,18 @@ public class EndlessRunner : MonoBehaviour
 
     void Start()
     {
-        //lives = 0;
         collectStrawberry.Stop();
         LoadPlayer();
         MenuCanvas();
         SetText();
+        inputTimer = 0;
     }
 
     void Update()
     {
         PlayerLeftRight();
         ActivateAdsButton();
+        InputTimer();
     }
 
     void FixedUpdate()
@@ -61,10 +67,7 @@ public class EndlessRunner : MonoBehaviour
             collectStrawberry.Play();
             other.gameObject.SetActive(false);
             count = count + 1;
-            if (count >= 5)
-            {
-                moveSpeed = 8 + (count / 5);
-            }
+            moveSpeed = 8 + (count / 5);
             SetText();
         }
     }
@@ -77,7 +80,7 @@ public class EndlessRunner : MonoBehaviour
             if (lives < 0)
             {
                 SavePlayer();
-                SceneManager.LoadScene("EndlessRunner");
+                GameOver();
             }
             else if (lives >= 0)
             {
@@ -150,11 +153,74 @@ public class EndlessRunner : MonoBehaviour
 #endif
     }
 
+    void InputTimer()
+    {
+        inputTimer += Time.deltaTime;
+        //Then you do your usual input checks
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //Reset the timer
+            inputTimer = 0;
+            //Do player action
+        }
+        //5 seconds or anything you want, I would turn that into a public field so you can change it from the inspector
+        if (inputTimer >= 5f)
+        {
+            inputTimer = 0;
+            if (playCanvas.enabled == true)
+            {
+                GameOver();
+                Debug.Log("GameOver");
+            }
+        }
+    }
+
+    void AplauseTimer()
+    {
+        timerIsRunning = true;
+
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("aplause");
+
+        if (objs.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+
+        if (timerIsRunning)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                SceneManager.LoadScene("EndlessRunner");
+                timeRemaining = 0;
+                timerIsRunning = false;
+            }
+        }
+    }
+
     void MenuCanvas()
     {
         moveSpeed = 0;
         menuCanvas.enabled = true;
         playCanvas.enabled = false;
+        gameOverCanvas.enabled = false;
+    }
+
+    void GameOver()
+    {
+        moveSpeed = 0;
+        timerIsRunning = true;
+        menuCanvas.enabled = false;
+        playCanvas.enabled = false;
+        gameOverCanvas.enabled = true;
+        endScoreText.text = count.ToString() + "  <sprite=0>";
+        if (gameOverCanvas.enabled == true)
+        {
+            AplauseTimer();
+        }
         
     }
 
@@ -196,5 +262,6 @@ public class EndlessRunner : MonoBehaviour
         moveSpeed = 8;
         menuCanvas.enabled = false;
         playCanvas.enabled = true;
+        gameOverCanvas.enabled = false;
     }
 }

@@ -10,10 +10,10 @@ public class GameOver : MonoBehaviour
 {
     public float timeRemaining = 11.676f;
     public bool timerIsRunning = false;
-
+    
     private void Start()
     {
-        // Starts the timer automatically
+        // Starts the timer automatically    
         timerIsRunning = true;
         
         GameObject[] objs = GameObject.FindGameObjectsWithTag("aplause");
@@ -34,7 +34,7 @@ public class GameOver : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("Menu");
+                SceneManager.LoadScene("EndlessRunner");
                 timeRemaining = 0;
                 timerIsRunning = false;
             }
