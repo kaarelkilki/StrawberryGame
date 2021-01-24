@@ -2010,6 +2010,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5774303252560337575, guid: fce8b9213fd25854eb12c978ed331183,
         type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e4aeaf3555fcfa44a7beb578aeb03ea,
+        type: 2}
+    - target: {fileID: 5774303252560337575, guid: fce8b9213fd25854eb12c978ed331183,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 207326972175099963, guid: 2e4aeaf3555fcfa44a7beb578aeb03ea,
+        type: 2}
+    - target: {fileID: 5774303252560337575, guid: fce8b9213fd25854eb12c978ed331183,
+        type: 3}
       propertyPath: m_VerticalAlignment
       value: 512
       objectReference: {fileID: 0}

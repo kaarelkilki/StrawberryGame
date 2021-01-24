@@ -155,38 +155,37 @@ public class EndlessRunner : MonoBehaviour
 
     void InputTimer()
     {
-        inputTimer += Time.deltaTime;
-        //Then you do your usual input checks
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (playCanvas.enabled == true)
         {
-            //Reset the timer
-            inputTimer = 0;
-            //Do player action
-        }
-        //5 seconds or anything you want, I would turn that into a public field so you can change it from the inspector
-        if (inputTimer >= 5f)
-        {
-            inputTimer = 0;
-            if (playCanvas.enabled == true)
+            inputTimer += Time.deltaTime;
+            //Then you do your usual input checks
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                GameOver();
-                Debug.Log("GameOver");
+                //Reset the timer
+                inputTimer = 0;
+                //Do player action
+            }
+            //5 seconds or anything you want, I would turn that into a public field so you can change it from the inspector
+            if (inputTimer >= 5f)
+            {
+                inputTimer = 0;
+                if (playCanvas.enabled == true)
+                {
+                    GameOver();
+                    Debug.Log("GameOver");
+                }
             }
         }
     }
 
-    void AplauseTimer()
+    void Timer()
     {
-        timerIsRunning = true;
-
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("aplause");
-
-        if (objs.Length > 1)
+        if(gameOverCanvas.enabled == true)
         {
-            Destroy(this.gameObject);
+            timerIsRunning = true;
         }
 
-        if (timerIsRunning)
+        if (timerIsRunning == true)
         {
             if (timeRemaining > 0)
             {
@@ -213,14 +212,12 @@ public class EndlessRunner : MonoBehaviour
     {
         moveSpeed = 0;
         timerIsRunning = true;
+        timeRemaining = 3.0f;
         menuCanvas.enabled = false;
         playCanvas.enabled = false;
         gameOverCanvas.enabled = true;
         endScoreText.text = count.ToString() + "  <sprite=0>";
-        if (gameOverCanvas.enabled == true)
-        {
-            AplauseTimer();
-        }
+        Timer();
         
     }
 
